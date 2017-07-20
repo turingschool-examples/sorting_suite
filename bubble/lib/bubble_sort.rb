@@ -2,22 +2,18 @@ class BubbleSort
 
   def sort(array)
     n = array.length
-
     loop do
-      #["d", "b", "a", "c"]
-      #["b", "d", "a", "c"]
-      #["b", "a", "d", "c"]
-      #["a", "b", "d", "c"]
-      #["a", "b", "c", "d"]
-
-
-
       swapped = false
 
       (n - 1).times do |i|
-        
+        if array[i] > array[i + 1]
+          array[i], array[i + 1] = array[i + 1], array[i]
+          swapped = true
+        end
+      end
+      break if not swapped
     end
+    array
   end
-
-
+  
 end

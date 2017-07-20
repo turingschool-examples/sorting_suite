@@ -12,7 +12,11 @@ class BubbleSortTest < Minitest::Test
     assert_instance_of BubbleSort, b
   end
 
+  def test_can_sort
+    b = BubbleSort.new
+    array = ["d", "b", "a", "c"]
 
-
-
+    assert_equal ["a", "b", "c", "d"], b.sort(array)
+  end
+  
 end
