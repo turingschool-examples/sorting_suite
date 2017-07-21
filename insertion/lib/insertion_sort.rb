@@ -1,5 +1,7 @@
-require 'benchmark.rb'
+
 class InsertionSort
+
+  include SortingSuite
 
   def sort(array)
     size = array.length

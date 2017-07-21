@@ -1,5 +1,7 @@
-require 'benchmark.rb'
+
 class Selection
+
+  include SortingSuite
 
   def sort(array)
     new = array.length

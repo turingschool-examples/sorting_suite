@@ -1,5 +1,7 @@
-require 'benchmark.rb'
+
 class BubbleSort
+
+  include SortingSuite
 
   def sort(array)
     n = array.length

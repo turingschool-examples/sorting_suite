@@ -1,5 +1,7 @@
-require 'benchmark.rb'
+
 class MergeSort
+
+  include SortingSuite
 
   def sort(array)
     if array.length <= 1
