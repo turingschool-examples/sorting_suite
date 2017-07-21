@@ -1,3 +1,5 @@
+require 'benchmark'
+
 class InsertionSort
 
   def sort(array)
