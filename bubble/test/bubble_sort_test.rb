@@ -8,7 +8,6 @@ class BubbleSortTest < Minitest::Test
   def test_exists
     b = BubbleSort.new
 
-
     assert_instance_of BubbleSort, b
   end
 
