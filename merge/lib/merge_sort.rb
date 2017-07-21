@@ -19,7 +19,7 @@ class MergeSort
     elsif left.first < right.first
       [left.first] + merge(left[1..left.length],right)
     else
-      [right.first]
+      [right.first] + merge(left, right[1..right.length])
     end
   end
 
