@@ -17,9 +17,20 @@ class MergeSortTest < Minitest::Test
     assert_equal ["a", "b", "c", "d"], merge.sort(array)
   end
 
-  def test_can_merge_left_and_right
+  def test_can_sort_numbers
     merge = MergeSort.new
-    array = ["d", "b", "a", "c"]
+    numbers = [4, 2, 1, 5, 3]
+    actual = [1, 2, 3, 4, 5]
 
+    assert_equal actual, merge.sort(numbers)
   end
+
+  def test_can_sort_neg_numbers
+    merge = MergeSort.new
+    numbers = [-4, -2, -1, -5, -3]
+    actual = [-5, -4, -3, -2, -1]
+
+    assert_equal actual, merge.sort(numbers)
+  end
+
 end

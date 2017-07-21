@@ -11,7 +11,7 @@ class InsertionSortTest < Minitest::Test
     assert_instance_of InsertionSort, insertion
   end
 
-  def test_can_sort_insertion_letters
+  def test_can_sort_letters
     insertion = InsertionSort.new
     array = ["d", "b", "a", "c"]
 
@@ -30,7 +30,6 @@ class InsertionSortTest < Minitest::Test
     numbers = [-4, -2, -1, -5, -3]
 
     assert_equal numbers, insertion.sort(numbers)
-
   end
 
 end
