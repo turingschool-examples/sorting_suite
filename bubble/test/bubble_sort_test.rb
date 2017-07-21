@@ -15,9 +15,9 @@ class BubbleSortTest < Minitest::Test
     assert_equal ["a"], bs.sort(["a"])
   end
 
-  def test_it_can_sort_multiple_elements
+  def test_it_can_sort_multiple_elements_once_through
     bs = BubbleSort.new
-    assert_equal ["a", "b", "c", "d"], bs.sort(["d", "b", "a", "c"])
+    assert_equal ["a", "b", "c", "d"], bs.sort(["b", "a", "d", "c"])
   end
 
 
