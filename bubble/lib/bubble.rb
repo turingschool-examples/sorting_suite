@@ -1,7 +1,7 @@
 class BubbleSort
 
-  def swaper(letters)
-    letters
+  def swaper(unsorted_items)
+    unsorted_items
   end
 
 

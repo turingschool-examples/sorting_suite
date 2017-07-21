@@ -18,8 +18,13 @@ class BubbleTest < MiniTest::Test
     given_unsorted_letters = ["d", "b", "a", "c"]
     expected = ["d", "b", "a", "c"]
     assert_equal expected, sorter.swaper(given_unsorted_letters)
+  end
 
-
+  def test_if_swaper_can_sort
+    sorter = BubbleSort.new
+    given_unsorted_letters = ["d", "b", "a", "c"]
+    expected = ["a", "b", "c", "d"]
+    assert_equal expected, sorter.swaper(given_unsorted_letters)
   end
 
 end
