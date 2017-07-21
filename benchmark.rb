@@ -2,6 +2,7 @@ require 'bubble_sort'
 require 'insertion_sort'
 require 'merge_sort'
 require 'selection_sort'
+require 'pry'
 
 module SortingSuite
 
@@ -9,14 +10,13 @@ module SortingSuite
 
     def timer(sort_name, array)
       start = Time.now
-
       if sort_name == SortingSuite::BubbleSort
         SortingSuite::BubbleSort.new.sort(array)
       elsif sort_name == SortingSuite::InsertionSort
         SortingSuite::InsertionSort.new.sort(array)
       elsif sort_name == SortingSuite::MergeSort
         SortingSuite::MergeSort.new.sort(array)
-      elsif sort_name == SortingSuite:SelectionSort
+      elsif sort_name == SortingSuite::SelectionSort
         SortingSuite::SelectionSort.new.sort(array)
       end
       final = Time.new
@@ -27,9 +27,26 @@ module SortingSuite
       puts "#{sort_name} took #{timer(sort_name, array)} seconds"
     end
 
+    def compare(array)
+      times = {}
+      times["BubbleSort"]    = timer(SortingSuite::BubbleSort, array)
+      times["InsertionSort"] = timer(SortingSuite::InsertionSort, array)
+      times["MergeSort"]     = timer(SortingSuite::MergeSort, array)
+      times["SelectionSort"] = timer(SortingSuite::SelectionSort, array)
+    end
 
+    def faster(array)
+    end
 
-
+    def slowest(array)
+    end
 
   end
+end
+
+
+
+random_list = []
+100000.times do
+  random_list.push(rand(0..1000))
 end
