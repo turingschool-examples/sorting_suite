@@ -6,7 +6,7 @@ require './bubble/lib/bubble_sort'
 class BubbleSortTest < Minitest::Test
   def test_instance_of_bs
     bs = BubbleSort.new
-    
+
     assert bs
     assert_instance_of BubbleSort, bs
   end
@@ -39,7 +39,7 @@ class BubbleSortTest < Minitest::Test
   def test_it_can_sort_a_large_number_of_elements
     bs = BubbleSort.new
 
-    sorted = ["a", "b", "c", "d" "z"]
+    sorted = ["a", "b", "c", "d", "m", "o", "p", "r", "x", "z"]
     assert_equal sorted, bs.sort(["b", "z", "d", "c", "a", "r", "o", "x", "p", "m"])
   end
 
