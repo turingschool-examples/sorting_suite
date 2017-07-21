@@ -1,3 +1,4 @@
+require 'benchmark.rb'
 class BubbleSort
 
   def sort(array)

@@ -36,15 +36,18 @@ module SortingSuite
     end
 
     def faster(array)
+      comparisons = compare(array)
+      puts "#{comparisons[-1][0]} is the fastest"
+
     end
 
     def slowest(array)
+      comparisons = compare(array)
+      puts "#{comparisons[0][0]} is the slowest"
     end
 
   end
 end
-
-
 
 random_list = []
 100000.times do

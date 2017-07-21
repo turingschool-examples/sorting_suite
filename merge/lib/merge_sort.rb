@@ -1,3 +1,4 @@
+require 'benchmark.rb'
 class MergeSort
 
   def sort(array)

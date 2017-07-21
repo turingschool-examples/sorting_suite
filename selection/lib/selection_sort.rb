@@ -1,3 +1,4 @@
+require 'benchmark.rb'
 class Selection
 
   def sort(array)
@@ -14,5 +15,5 @@ class Selection
     end
     return array
   end
-      
+
 end

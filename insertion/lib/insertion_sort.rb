@@ -1,3 +1,4 @@
+require 'benchmark.rb'
 class InsertionSort
 
   def sort(array)
