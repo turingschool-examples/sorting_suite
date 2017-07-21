@@ -17,7 +17,4 @@ class MergeSortTest < Minitest::Test
     assert_equal ["a", "b", "c", "d"], merge.sort(array)
   end
 
-
-
-
 end
