@@ -1,12 +1,10 @@
-require 'bubble_sort'
-require 'insertion_sort'
-require 'merge_sort'
-require 'selection_sort'
-require 'pry'
+require './bubble/lib/bubble_sort'
+require './insertion/lib/insertion_sort'
+require './merge/lib/merge_sort'
+require './selection/lib/selection_sort'
+require 'benchmark'
 
 module SortingSuite
-
-  class Benchmark
 
     def timer(sort_name, array)
       start = Time.now
@@ -46,10 +44,16 @@ module SortingSuite
       puts "#{comparisons[0][0]} is the slowest"
     end
 
-  end
 end
 
-random_list = []
-100000.times do
-  random_list.push(rand(0..1000))
-end
+
+
+benchmark = SortingSuite.new
+
+benchmark.time(SortingSuite::InsertionSort, [3,3,4,5,1])
+
+benchmark.time(SortingSuite::MergeSort, (0..100).to_a.shuffle)
+
+benchmark.fastest([2, 8, 1, 0, 5])
+
+benchmark.slowest([1, 2, 3, 4, 5])
