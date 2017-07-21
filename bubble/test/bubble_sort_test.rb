@@ -10,4 +10,17 @@ class BubbleSortTest < Minitest::Test
     assert_instance_of BubbleSort, bs
   end
 
+  def test_it_can_sort_one_element
+    bs = BubbleSort.new
+    assert_equal ["a"], bs.sort(["a"])
+  end
+
+  def test_it_can_sort_multiple_elements
+    bs = BubbleSort.new
+    assert_equal ["a", "b", "c", "d"], bs.sort(["d", "b", "a", "c"])
+  end
+
+
+
+
 end
