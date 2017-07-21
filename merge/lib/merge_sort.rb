@@ -1,5 +1,3 @@
-require 'benchmark'
-
 class MergeSort
 
   def sort(array)

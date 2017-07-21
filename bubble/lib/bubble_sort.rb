@@ -1,6 +1,3 @@
-require 'benchmark'
-
-
 class BubbleSort
 
   def sort(array)
