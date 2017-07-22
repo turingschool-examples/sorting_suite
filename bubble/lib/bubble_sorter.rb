@@ -11,9 +11,15 @@ end
 
 def compare_two_elements
   index = 0
-  if @array[index] > @array[index +1]
-    @array[index], @array[index + 1] = @array[index + 1], @array[index]
+  until index == @array.length-1
+    if @array[index] > @array[index+1]
+      @array[index], @array[index + 1] = @array[index + 1], @array[index]
+      index+=1
+    else
+      index+=1
+    end
   end
+  @array
 end
 
 # def do_it_this_many_times

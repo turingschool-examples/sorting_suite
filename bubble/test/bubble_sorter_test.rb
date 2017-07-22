@@ -13,7 +13,7 @@ class BubbleSorterTest < Minitest::Test
 
 def test_it_can_compare_two_elements
   bubble = BubbleSorter.new([21,3, 5])
-  assert_equal [3,21, 5], bubble.compare_two_elements
+  assert_equal [3,5,21], bubble.compare_two_elements
 end
 
 end
