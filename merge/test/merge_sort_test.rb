@@ -64,14 +64,24 @@ class MergeSortTest < Minitest::Test
     assert_equal [[4],[3,6],[9],[8,7]], merge
   end
 
-  # def test_split_arrays_can_reorder
-  #   sorter = MergeSort.new
-  #
-  #   mer
-  #
-  #
-  # end
+  def test_split_arrays_can_reorder
+    sorter = MergeSort.new
 
+    reordered = sorter.sort_arrays_of_two([[4],[3,6],[9],[8,7]])
 
+    assert_equal [[4],[3,6],[9],[7,8]], reordered
+  end
+
+  def test_final_merge_array
+    sorter = MergeSort.new
+
+    assert_equal [1,2,3,4,5,6,7,8], sorter.final_merge([[1,3], [2,4], [5,7], [6,8]])
+  end
+
+  def test_sort
+    sorter = MergeSort.new
+
+    assert_equal ["a", "b", "c", "d"], sorter.sort(["d", "b", "a", "c"])
+  end
 
 end

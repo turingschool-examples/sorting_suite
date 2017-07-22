@@ -24,7 +24,12 @@ class MergeSort
     original_array
   end
 
-
+  def sort_arrays_of_two(array)
+    sorted_arrays = []
+    array.each do |array_entry|
+      sorted_arrays << swap_places_if_needed(array_entry)
+    end
+  end
 
   def split_array_in_half(array)
     count = array.count
@@ -44,6 +49,20 @@ class MergeSort
       array[1] = first_index
       array
     end
+  end
+
+  def sort(array)
+    split_array = split_array_down_to_arrays_of_two([array])
+    sorted_arrays = sort_arrays_of_two(split_array)
+    final_merge = final_merge(sorted_arrays)
+  end
+
+  def final_merge(array)
+    if array.count > 1
+      array << merge_sorted_arrays(array.shift, array.shift)
+      array = final_merge(array)
+    end
+    array.flatten
   end
 
   def merge_sorted_arrays(array1, array2)
