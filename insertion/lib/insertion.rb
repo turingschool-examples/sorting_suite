@@ -25,10 +25,12 @@ class InsertionSort
         if sorted[i].nil?
           sorted.insert(i, current)
           array.shift
-          # binding.pry
         end
       end
     end
     sorted
   end
 end
+
+sorter = InsertionSort.new
+p sorter.sort(["d", "b", "a", "c"])
