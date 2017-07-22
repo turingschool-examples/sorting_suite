@@ -3,14 +3,14 @@ require 'minitest/pride'
 require './lib/bubble'
 require 'pry'
 
-class BubbleTest < Minitest::Test
+class BubbleSortTest < Minitest::Test
   def test_class_exist
-    bubble = Bubble.new
-    assert_instance_of Bubble, bubble
+    bubble = BubbleSort.new
+    assert_instance_of BubbleSort, bubble
   end
 
   def test_it_can_take_array_as_argument
-    bubble = Bubble.new
+    bubble = BubbleSort.new
 
     array = [2, 0, 1, 3, 4, 5]
 
@@ -18,7 +18,7 @@ class BubbleTest < Minitest::Test
   end
 
   def test_sort_method_can_sort
-    bubble = Bubble.new
+    bubble = BubbleSort.new
 
     array = [2, 0, 1, 3, 4, 5]
 
@@ -28,13 +28,24 @@ class BubbleTest < Minitest::Test
   end
 
   def test_sort_method_can_sort_completely_unsorted_array
-    bubble = Bubble.new
+    bubble = BubbleSort.new
 
     array = [10, 7, 4, 5, 2, 8, 2, 9]
 
     expected = [2, 2, 4, 5, 7, 8, 9, 10]
 
     assert_equal expected, bubble.sort(array)
+  end
+
+  def test_it_can_sort_unsorted_letters
+    bubble = BubbleSort.new
+
+    array = ["d", "b", "a", "c"]
+
+    expected = ["a", "b", "c", "d"]
+
+    assert_equal expected, bubble.sort(array)
+
   end
 
 end

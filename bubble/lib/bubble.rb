@@ -1,4 +1,4 @@
-class Bubble
+class BubbleSort
   def sort(array)
     # Determine the length of the array
     # [2, 0, 1, 3, 4, 5] => 6
@@ -23,3 +23,6 @@ class Bubble
     array
   end
 end
+
+sorter = BubbleSort.new
+p sorter.sort(["d", "b", "a", "c"])
