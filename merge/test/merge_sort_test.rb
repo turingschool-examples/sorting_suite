@@ -1,20 +1,11 @@
-require './lib/insertion_sort'
+require './lib/merge_sort'
 require 'minitest/autorun'
 require 'minitest/pride'
 require 'pry'
 
-
-class InsertionSortTest < Minitest::Test
-  def test_insert_pushes_first_element_to_first_location
-    sorter = InsertionSort.new
-    unsorted = [3, 5, 0]
-
-    sorted = sorter.sort(unsorted)
-    assert_equal 0, sorted[0]
-  end
-
+class MergeSortTest < Minitest::Test
   def test_sort_using_letters
-    sorter = InsertionSort.new
+    sorter = MergeSort.new
     sorted1 = sorter.sort(["d", "b", "a", "c"])
     sorted2 = sorter.sort(["d", "a", "c", "b"])
     sorted3 = sorter.sort(["d", "c", "b", "a"])
@@ -27,7 +18,7 @@ class InsertionSortTest < Minitest::Test
   end
 
   def test_sort_using_numbers
-    sorter = InsertionSort.new
+    sorter = MergeSort.new
     number_array = [3, 5, 1, 7, 10]
     number_array2 = [5, 3, 1, 10, 7]
     number_array3 = [31, 50, 1, 70, 100000]
