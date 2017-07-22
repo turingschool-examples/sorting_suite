@@ -27,4 +27,14 @@ class BubbleTest < Minitest::Test
     assert_equal expected, bubble.sort(array)
   end
 
+  def test_sort_method_can_sort_completely_unsorted_array
+    bubble = Bubble.new
+
+    array = [10, 7, 4, 5, 2, 8, 2, 9]
+
+    expected = [2, 2, 4, 5, 7, 8, 9, 10]
+
+    assert_equal expected, bubble.sort(array)
+  end
+
 end
