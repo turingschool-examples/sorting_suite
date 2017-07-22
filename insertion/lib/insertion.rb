@@ -3,17 +3,28 @@ class Insertion
 
   def sort(unsorted)
     sorted = []
-    # to_insert = unsorted.shift
-    # sorted << to_insert
+    unsorted_item = unsorted.shift
+    sorted << unsorted_item
     until unsorted.count == 0
-      binding.pry
-      to_insert = unsorted.shift
-      sorted.each_with_index.map do |element, index|
-        if to_insert > element
-          sorted.insert(index, to_insert)
+      unsorted_item = unsorted.shift
+      sorted.each_with_index.map do |sorted_item, index|
+        insert_item_in_correct_spot(unsorted_item, sorted_item, index)
+        if unsorted_item < sorted_item
+          sorted.insert(index, unsorted_item)
+          unsorted_item = nil
+          break
         end
       end
+      sorted << unsorted_item if unsorted_item != nil
     end
     sorted
   end
+
+  # def insert_item_in_correct_spot(unsorted_item, sorted_item, index)
+  #   if unsorted_item < sorted_item
+  #     sorted.insert(index, unsorted_item)
+  #     unsorted_item = nil
+  #     break
+  #   end
+  # end
 end
