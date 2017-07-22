@@ -1,6 +1,6 @@
 class BubbleSort
 
-  def sort(array)
+  def sorted(array)
     array.each_index do |first|
       array.each_index do |second|
         if array[first] < array[second]

@@ -12,6 +12,6 @@ class BubbleSortTest < Minitest::Test
   def test_it_can_sort
     sorter = BubbleSort.new
     expected = ["d", "b", "a", "c"]
-    assert_equal ["a","b","c","d"], sorter.sort(expected)
+    assert_equal ["a","b","c","d"], sorter.sorted(expected)
   end
 end
