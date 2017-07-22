@@ -1,6 +1,14 @@
 class Bubble
 
   def sorter(array)
+    iterations = array.length - 1
+    iterations.times do |iterate|
+      iterate = iterate(array)
+    end
+    array
+  end
+
+  def iterate (array)
     previous = array[0]
     array.each_with_index do |num, index|
       if index == 0
@@ -17,7 +25,6 @@ class Bubble
     new_index = index - 1
     array[index], array[new_index] = array[new_index], array[index]
     previous = array[index]
-    previous
   end
 
 end

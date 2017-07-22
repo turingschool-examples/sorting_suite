@@ -17,4 +17,10 @@ class BubbleTest < Minitest::Test
     assert_equal [0, 1, 2, 3, 4, 5], bubble.sorter(array)
   end
 
+  def test_it_can_sort_another_array
+    bubble = Bubble.new
+    array = [4, 2, 0, 3, 1]
+    assert_equal [0, 1, 2, 3, 4], bubble.sorter(array)
+  end
+
 end
