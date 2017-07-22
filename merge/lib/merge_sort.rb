@@ -6,22 +6,33 @@ class MergeSort
   end
 
   def split_array_down_to_arrays_of_two(original_array)
-    if original_array[-1].count > 2
-      temp_array = []
+    # if original_array.any? do |array|
+    #   index = find_index(array)
+    #   array.count > 2
+    # end
+    # if original_array[-1].count > 2
+      # temp_array = []
       original_array.each_with_index do |original_array_entry, index|
         if original_array_entry.count > 2
           split_array = split_array_in_half(original_array_entry)
-          temp_array.pop
-          temp_array << split_array[0]
-          temp_array << split_array[1]
-          if original_array.count != index + 1
-            temp_array << original_array[index + 1]
-          end
+          # binding.pry
+          original_array.delete_at(index)
+          # temp_array.pop
+          # temp_array << split_array[0]
+          # temp_array << split_array[1]
+          # binding.pry
+          original_array.insert(index, split_array[0])
+          original_array.insert(index+1, split_array[1])
+          # if original_array.count != index + 1
+          #   temp_array << original_array[index + 1]
+          # end
+          original_array = split_array_down_to_arrays_of_two(original_array)
+
         end
       end
-      original_array = split_array_down_to_arrays_of_two(temp_array)
-    end
-    original_array
+      # original_array = split_array_down_to_arrays_of_two(original_array)
+    # end
+    # original_array
   end
 
   def sort_arrays_of_two(array)
