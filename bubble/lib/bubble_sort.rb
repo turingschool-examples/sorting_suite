@@ -1,6 +1,6 @@
-class Bubble
+class BubbleSort
 
-  def sorter(array)
+  def sort(array)
     iterations = array.length - 1
     iterations.times do |iterate|
       iterate = iterate(array)
