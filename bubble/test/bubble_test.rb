@@ -17,4 +17,14 @@ class BubbleTest < Minitest::Test
     assert_instance_of Array, bubble.sort(array)
   end
 
+  def test_sort_method_can_sort
+    bubble = Bubble.new
+
+    array = [2, 0, 1, 3, 4, 5]
+
+    expected = [0, 1, 2, 3, 4, 5]
+
+    assert_equal expected, bubble.sort(array)
+  end
+
 end
