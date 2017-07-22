@@ -17,12 +17,22 @@ class InsertionSortTest < Minitest::Test
     assert_instance_of Array, insertion.sort(array)
   end
 
-  def test_it_can_sort_an_array
+  def test_it_can_sort_an_array_of_numbers
     insertion = InsertionSort.new
 
     array = [2, 0, 1, 3, 4, 5]
 
     expected = [0, 1, 2, 3, 4, 5]
+
+    assert_equal expected, insertion.sort(array)
+  end
+
+  def test_it_can_sort_an_array_of_letters
+    insertion = InsertionSort.new
+
+    array = ["d", "b", "a", "c"]
+
+    expected = ["a", "b", "c", "d"]
 
     assert_equal expected, insertion.sort(array)
   end
