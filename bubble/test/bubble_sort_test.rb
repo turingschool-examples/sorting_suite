@@ -8,4 +8,10 @@ class BubbleSortTest < Minitest::Test
     sorter = BubbleSort.new
     assert_instance_of BubbleSort, sorter
   end
+
+  def test_it_can_sort
+    sorter = BubbleSort.new
+    expected = ["d", "b", "a", "c"]
+    assert_equal ["a","b","c","d"], sorter.sort(expected)
+  end
 end
