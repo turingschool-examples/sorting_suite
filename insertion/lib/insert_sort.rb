@@ -9,5 +9,9 @@ class InsertSort
     @unsorted = arr
   end
 
+  def send_first_element_into_sorted
+    @sorted << @unsorted.shift
+  end
+
 
 end
