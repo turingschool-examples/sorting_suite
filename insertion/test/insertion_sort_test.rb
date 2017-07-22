@@ -1,6 +1,7 @@
 require './lib/insertion'
 require 'minitest/autorun'
 require 'minitest/pride'
+require 'pry'
 
 
 
@@ -8,25 +9,25 @@ class InsertionSortTest < Minitest::Test
   def test_insert_pushes_first_element_to_first_location
     sorter = InsertionSort.new
     unsorted = [3, 5, 0]
-    sorted = sorter.sort(unsorted)
 
+    sorted = sorter.sort(unsorted)
     assert_equal 0, sorted[0]
   end
 
   def test_sort_using_letters
-    skip
     sorter = InsertionSort.new
-    letter_array = ["d", "b", "a", "c"]
-    letter_array2 = ["d", "a", "c", "b"]
-    letter_array3 = ["d", "c", "b", "a"]
+    sorted1 = sorter.sort(["d", "b", "a", "c"])
+    sorted2 = sorter.sort(["d", "a", "c", "b"])
+    sorted3 = sorter.sort(["d", "c", "b", "a"])
 
-    assert_equal ["a", "b", "c", "d"], sorter.sort(letter_array)
-    assert_equal ["a", "b", "c", "d"], sorter.sort(letter_array2)
-    assert_equal ["a", "b", "c", "d"], sorter.sort(letter_array3)
+    expected = ["a", "b", "c", "d"]
+
+    assert_equal expected, sorted1
+    assert_equal expected, sorted2
+    assert_equal expected, sorted3
   end
 
   def test_sort_using_numbers
-    skip
     sorter = InsertionSort.new
     number_array = [3, 5, 1, 7, 10]
     number_array2 = [5, 3, 1, 10, 7]
