@@ -1,15 +1,11 @@
 class BubbleSort
 
   def sorted(array)
-    array.each_index do |first|
-      second_array(array, first)
-    end
+    array.each_index {|first| second_array(array, first)}
   end
 
   def second_array(array,first)
-    array.each_index do |second|
-      comparison(array,first,second)
-    end
+    array.each_index {|second| comparison(array,first,second)}
   end
 
   def comparison(array,first,second)
