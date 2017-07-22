@@ -3,20 +3,17 @@ class InsertionSort
   def sort(array)
     sorted = []
     sorted << array.shift
-    array.each do |num|
-      if num < sorted[0]
-        sorted.unshift(num)
-      else
-        sorted << num
+    iterations = array.length
+     iterations.times do
+        sorted.unshift(array.shift)
         bubble(sorted)
       end
-    end
     sorted
   end
 
   def bubble(array)
     iterations = array.length - 1
-    iterations.times do 
+    iterations.times do
       iterate(array)
     end
     array

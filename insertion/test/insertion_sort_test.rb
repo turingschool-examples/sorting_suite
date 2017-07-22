@@ -2,6 +2,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require 'minitest/emoji'
 require './lib/insertion_sort'
+require 'pry'
 
 class InsertionSortTest < Minitest::Test
 
@@ -19,6 +20,7 @@ class InsertionSortTest < Minitest::Test
   end
 
   def test_it_can_sort_letters
+
     sorter = InsertionSort.new
     array = [["d", "b", "a", "c"]]
 
@@ -26,6 +28,7 @@ class InsertionSortTest < Minitest::Test
   end
 
   def test_it_can_sort_negative_numbers
+
     sorter = InsertionSort.new
     array = [3, -1, 2, 0, -2, 1]
 
@@ -33,6 +36,7 @@ class InsertionSortTest < Minitest::Test
   end
 
   def test_it_can_sort_if_numbers_are_skipped
+    
     sorter = InsertionSort.new
     array = [2, 5, 0, 1, 7, 4]
 
