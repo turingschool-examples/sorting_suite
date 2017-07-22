@@ -6,14 +6,18 @@ class Bubble
       if index == 0
         next
       elsif num < previous
-        new_index = index - 1
-        array[index], array[new_index] = array[new_index], array[index]
-        previous = array[index]
+        swap(array, index)
       else
         previous = array[index]
       end
     end
-    array
+  end
+
+  def swap(array, index)
+    new_index = index - 1
+    array[index], array[new_index] = array[new_index], array[index]
+    previous = array[index]
+    previous
   end
 
 end
