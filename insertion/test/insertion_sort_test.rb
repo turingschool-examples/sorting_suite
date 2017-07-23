@@ -24,4 +24,10 @@ class InsertionSortTest < Minitest::Test
     expected = ["B", "a", "c", "d"]
     assert_equal expected, actual
   end
+
+  def test_it_can_sort_numbers
+    actual   = sorter.sorter([4,2,1,3])
+    expected = [1,2,3,4]
+    assert_equal expected, actual
+  end
 end
