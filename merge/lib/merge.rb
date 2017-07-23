@@ -53,3 +53,6 @@ class MergeSort
     result
   end
 end
+
+sorter = MergeSort.new
+p sorter.sort(["d", "b", "a", "c"])
