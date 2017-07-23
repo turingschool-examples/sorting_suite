@@ -5,12 +5,13 @@ class BubbleSort
   attr_reader :array,
               :index
 
-  def initialize(array)
-    @array = array
+  def initialize
+    @array = nil
     @index = 0
   end
 
-  def bubble
+  def sort(array)
+    @array = array
     swapped = true
     size = @array.length - 1
     while swapped
