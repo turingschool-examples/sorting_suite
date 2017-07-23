@@ -12,4 +12,10 @@ class InsertionSortTest < Minitest::Test
   def test_its_a_thing
     assert_instance_of InsertionSort, sorter
   end
+
+  def test_it_can_sort
+    actual   = sorter.sorter(["d", "b", "a", "c"])
+    expected = ["a", "b", "c", "d"]
+    assert_equal expected, actual
+  end
 end
