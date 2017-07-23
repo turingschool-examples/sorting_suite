@@ -8,19 +8,9 @@ class BubbleSort
   end
 
   def sort_sequence
-    previous = @unsorted[@index]
-    current = @unsorted[@index + 1]
-    placeholder = 0
-
-    if current < previous
-      placeholder = current
-      current = previous
-      previous = placeholder
+    if @unsorted[@index] > @unsorted[@index + 1]
+      @unsorted[@index], @unsorted[@index + 1] = @unsorted[@index + 1], @unsorted[@index]
     end
-
-    @unsorted[@index + 1] = current
-    @unsorted[@index] = previous
-    @unsorted
   end
 
   def bubble

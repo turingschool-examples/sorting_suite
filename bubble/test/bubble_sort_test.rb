@@ -11,6 +11,9 @@ class BubbleSortTest < Minitest::Test
     assert_equal [1,3], bs.sort_sequence
   end
 
+  def test_it_can_leave_sorted_numbers_alone
+  end
+
   def test_it_can_bubble_sort
     bs = BubbleSort.new([3,1,4,2,0])
 
