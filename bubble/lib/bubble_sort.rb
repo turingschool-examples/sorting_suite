@@ -6,7 +6,6 @@ class BubbleSort
               :index
 
   def initialize
-    @array = nil
     @index = 0
   end
 
