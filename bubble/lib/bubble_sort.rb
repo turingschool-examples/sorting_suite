@@ -10,12 +10,6 @@ class BubbleSort
     @index = 0
   end
 
-  def swap
-    if @array[@index] > @array[@index + 1]
-      @array[@index], @array[@index + 1] = @array[@index + 1], @array[@index]
-    end
-  end
-
   def bubble
     swapped = true
     size = @array.length - 1
