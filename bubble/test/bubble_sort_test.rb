@@ -13,7 +13,7 @@ class BubbleSortTest < MiniTest::Test
   def sort
     sorter = BubbleSort.new
 
-    assert_equal ["a", "b", "c", "d"], sorter.sort
+    assert_equal ["a", "b", "c", "d"], sorter.bubble_sort
   end
 
 end
