@@ -40,7 +40,13 @@ class BubbleTest < MiniTest::Test
     start_letters = ["d", "b", "a", "c", "d", "b", "a", "c"]
     expected_letters = ["a", "a", "b", "b", "c", "c", "d", "d"]
     assert_equal expected_letters, sorter.swaper(start_letters)
+  end
 
+  def test_if_numbers_can_work
+    sorter = BubbleSort.new
+    start_numbers = [5, 3, 4, 1, 2]
+    expected_numbers = [1, 2, 3, 4, 5]
+    assert_equal expected_numbers, sorter.swaper(start_numbers)
   end
 
 
