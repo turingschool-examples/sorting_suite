@@ -2,21 +2,33 @@ require 'pry'
 
 class BubbleSort
 
-  def initialize(unsorted)
-    @unsorted = unsorted
+  attr_reader :array,
+              :index
+
+  def initialize(array)
+    @array = array
     @index = 0
   end
 
-  def sort_sequence
-    if @unsorted[@index] > @unsorted[@index + 1]
-      @unsorted[@index], @unsorted[@index + 1] = @unsorted[@index + 1], @unsorted[@index]
+  def swap
+    if @array[@index] > @array[@index + 1]
+      @array[@index], @array[@index + 1] = @array[@index + 1], @array[@index]
     end
   end
 
   def bubble
-    while @index < @unsorted.length - 1
-      sort_sequence
-      @index += 1
+    swapped = true
+    size = @array.length - 1
+    while swapped
+      @index = 0
+      swapped = false
+      while @index < size
+        if @array[@index] > @array[@index + 1]
+          @array[@index], @array[@index + 1] = @array[@index + 1], @array[@index]
+          swapped = true
+        end
+        @index += 1
+      end
     end
   end
 
