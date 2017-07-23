@@ -1,4 +1,7 @@
-class Insertion
+require 'pry'
+require 'benchmark'
+
+class InsertionSort
 
 
 
