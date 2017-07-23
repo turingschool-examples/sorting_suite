@@ -28,4 +28,11 @@ class BubbleTest < MiniTest::Test
     assert_equal expected, sorter.swaper(given_unsorted_letters)
   end
 
+  def test_if_bubble_sort_works_for_random_letters
+    sorter = BubbleSort.new
+    expected = ("a".."z").to_a
+    test_letters = expected.shuffle
+    assert_equal expected, sorter.swaper(test_letters) 
+  end
+
 end
