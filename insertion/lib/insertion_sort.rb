@@ -11,9 +11,14 @@ class InsertionSort
   def sort(array)
     @unsorted = array
     @sorted = []
-    index = 0 
-    @sorted << unsorted[index]
+    index = 0
+    @sorted.insert(index, unsorted[index])
+    # @sorted << unsorted[index]
     @unsorted.delete(unsorted[index])
+    # if sorted[index] < unsorted[index]
+    #   @sorted << unsorted[index]
+    #   @unsorted.delete(unsorted[index])
+    # end
   end
 
 end
