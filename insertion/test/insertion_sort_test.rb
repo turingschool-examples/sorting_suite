@@ -18,4 +18,10 @@ class InsertionSortTest < Minitest::Test
     expected = ["a", "b", "c", "d"]
     assert_equal expected, actual
   end
+
+  def test_it_can_sort_mixed_letter
+    actual   = sorter.sorter(["d", "B", "a", "c"])
+    expected = ["B", "a", "c", "d"]
+    assert_equal expected, actual
+  end
 end
