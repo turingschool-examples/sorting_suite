@@ -32,7 +32,16 @@ class BubbleTest < MiniTest::Test
     sorter = BubbleSort.new
     expected = ("a".."z").to_a
     test_letters = expected.shuffle
-    assert_equal expected, sorter.swaper(test_letters) 
+    assert_equal expected, sorter.swaper(test_letters)
   end
+
+  def test_longer_list_of_letters
+    sorter = BubbleSort.new
+    start_letters = ["d", "b", "a", "c", "d", "b", "a", "c"]
+    expected_letters = ["a", "a", "b", "b", "c", "c", "d", "d"]
+    assert_equal expected_letters, sorter.swaper(start_letters)
+
+  end
+
 
 end
