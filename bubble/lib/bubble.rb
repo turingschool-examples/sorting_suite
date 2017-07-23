@@ -29,3 +29,10 @@ class BubbleSort
   end
 
 end
+
+time = Benchmark.measure do
+  sorter = BubbleSort.new
+  # p sorter.swaper(["d", "b", "a", "c"])
+  p sorter.swaper(('a'..'z').to_a.shuffle)
+end
+puts time
