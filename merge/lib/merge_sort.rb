@@ -12,7 +12,7 @@ class MergeSort
       end
       left = sort(left)
       right = sort(right)
-      return merge(left, right)
+      merge(left, right)
     end
   end
 
@@ -32,6 +32,6 @@ class MergeSort
     while right[0] != nil
       result << right.shift
     end
-    return result
+    result
   end
 end
