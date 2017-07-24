@@ -1,21 +1,36 @@
+require 'pry'
 class InsertionSort
   def sort(in_set)
+    sorted_array = []
     if in_set.length <= 1
-      result_set = in_set[0]
+      sorted_array = in_set[0]
     else
-      sorted_array = []
-      in_set.each_with_index do |element, outside|
-        if outside == 0
-          sorted_array << in_set[outside]
+      in_set.each_with_index do |element, position|
+        if position == 0
+          sorted_array << in_set[position]
         else
-          sorted_array.each_with_index do |sorted, inside|
-            if in_set[outside] > sorted[inside]
-              sorted_array.insert(inside, inset[outside]
-            end
+          sorted_array = rebuild(element, sorted_array)
+        end
+      end
+    end
+    sorted_array
+  end
+
+  def rebuild(element, sorted_array)
+    if element < sorted_array[0]
+      sorted_array.unshift(element)
+    elsif element > sorted_array.last
+      sorted_array.push(element)
+    else
+      sorted_array.each_with_index do |sorted, index|
+        if  index > 0 && element > sorted_array[index -1]
+          if element < sorted_array[index]
+            sorted_array.insert(index, element)
+            break
           end
         end
       end
     end
-    result_set
+    sorted_array
   end
 end

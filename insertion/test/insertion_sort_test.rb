@@ -37,13 +37,13 @@ class InsertionSortTest < Minitest::Test
   end
 
   def test_it_can_sort_more_mixed_elements
-    is = InserionSort.new
+    is = InsertionSort.new
 
     assert_equal ["a", "b", "c", "d"], is.sort(["b", "d", "c", "a"])
   end
 
   def test_it_can_sort_a_large_number_of_elements
-    is = BubbleSort.new
+    is = InsertionSort.new
 
     sorted = ["a", "b", "c", "d", "m", "o", "p", "r", "x", "z"]
     assert_equal sorted, is.sort(["b", "z", "d", "c", "a", "r", "o", "x", "p", "m"])
