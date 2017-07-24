@@ -12,21 +12,29 @@ class InsertionSort
     @unsorted = array
     @sorted = []
     index = 0
-    @sorted.insert(0, unsorted[0])
-    @unsorted.delete(unsorted[0])
+    @sorted.insert(0, @unsorted[0])
+    @unsorted.delete(@unsorted[0])
     while unsorted[0] != nil
-      if unsorted[0] < sorted[index]
-        @sorted.insert(index, unsorted[0])
-        @unsorted.delete(unsorted[0])
-        index = 0
-      else unsorted[0] > sorted[index]
-        index += 1
+      if sorted[index] != nil
+        if unsorted[0] < sorted[index]
+          @sorted.insert(index, unsorted[0])
+          @unsorted.delete(@unsorted[0])
+          index = 0
+        else
+          index += 1
+        end
+      else
+        @sorted.push(unsorted[0])
+        @unsorted.delete(@unsorted[0])
       end
     end
-    # if sorted[index] < unsorted[index]
-    #   @sorted << unsorted[index]
-    #   @unsorted.delete(unsorted[index])
-    # end
+    #     if unsorted[0] < sorted[index]
+    #       @sorted.insert(index, unsorted[0])
+    #       @unsorted.delete(unsorted[0])
+    #       index = 0
+    #     elsif unsorted[0] > sorted[index]
+    #       index += 1
+    #     end
   end
 
 end
