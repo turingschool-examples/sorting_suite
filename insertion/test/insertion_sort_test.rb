@@ -25,7 +25,7 @@ class InsertionSortTest < Minitest::Test
   def test_it_sorts_a_really_really_ridiculously_good_looking_list
     list = (0..5000).to_a
     list.shuffle
-    assert_equal list.sort, @is.insertion_sort(list)
+    assert_equal (0..5000).to_a, @is.insertion_sort(list)
   end
 
 end
