@@ -48,4 +48,9 @@ class MergeSortTest < MiniTest::Test
     assert_equal expected, sorter.merge(test_numbers)
   end
 
+  def test_if_it_can_single_sort_pass_with_string_array
+    sorter = SelectionSort.new
+    assert_equal "alpha", sorter.sort_pass(["alpha","delta","beta","gamma","epsilon"])
+  end
+
 end
