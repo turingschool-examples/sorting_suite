@@ -48,4 +48,14 @@ class InsertionSortTest < MiniTest::Test
     assert_equal expected, sorter.insert(test_letters)
   end
 
+  def test_insertion_sort_outliers
+    sorter = InsertionSort.new
+    expected = ["a", "b", "c", "d"]
+    test_letters = ["d", "b", "a", "c"]
+    assert_equal expected, sorter.insert(test_letters)
+    start_letters = ["d", "b", "a", "c", "d", "b", "a", "c"]
+    expected_letters = ["a", "a", "b", "b", "c", "c", "d", "d"]
+    assert_equal expected_letters, sorter.insert(start_letters)
+  end
+
 end
