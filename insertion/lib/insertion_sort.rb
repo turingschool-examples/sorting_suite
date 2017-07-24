@@ -5,9 +5,6 @@ class InsertionSort
   attr_reader :unsorted,
               :sorted
 
-  def initialize
-  end
-
   def sort(array)
     @unsorted = array
     @sorted = []
@@ -23,8 +20,6 @@ class InsertionSort
         end
       else
         insertion_at_end
-        # @sorted.push(@unsorted[0])
-        # @unsorted.shift
         index = 0
       end
     end

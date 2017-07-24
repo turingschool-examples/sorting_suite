@@ -6,24 +6,29 @@ class BubbleSort
               :index
 
   def initialize
-    @index = 0
+    @array = []
   end
 
   def sort(array)
+    index = 0
     @array = array
     swapped = true
     size = @array.length - 1
     while swapped
-      @index = 0
+      index = 0
       swapped = false
-      while @index < size
-        if @array[@index] > @array[@index + 1]
-          @array[@index], @array[@index + 1] = @array[@index + 1], @array[@index]
+      while index < size
+        if @array[index] > @array[index + 1]
+          swap(index)
           swapped = true
         end
-        @index += 1
+        index += 1
       end
     end
+  end
+
+  def swap(index)
+    @array[index], @array[index + 1] = @array[index + 1], @array[index]
   end
 
 end
