@@ -32,6 +32,11 @@ class SelectionSortTest < MiniTest::Test
     assert_equal [1,1,2,3,4,5],sorter.selection([4,3,2,1,5,1])
   end
 
+  def test_it_sorts_with_lots_of_integers_in_reverse
+    sorter = SelectionSort.new
+    assert_equal (0..100).to_a + [100], sorter.selection((0..100).to_a.reverse + [100])
+  end
+
 
 
 end
