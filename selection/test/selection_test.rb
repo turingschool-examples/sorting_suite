@@ -20,6 +20,13 @@ class SelectionSortTest < MiniTest::Test
     assert_equal expected, sorter.selection(test_numbers)
   end
 
+  def test_selection_sort_given_second_set
+    sorter = SelectionSort.new
+    expected = [0, 1, 2, 3, 4]
+    test_numbers = [4, 0, 2, 3, 1]
+    assert_equal expected, sorter.selection(test_numbers)
+  end
+
 
 
 end
