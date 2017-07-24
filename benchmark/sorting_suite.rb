@@ -73,7 +73,7 @@ module SortingSuite
   end
 
   class Benchmark
-def time(sort_method, array)
+    def time(sort_method, array)
       start_time = Time.now
       method = sort_method.new
       method.sort(array)
