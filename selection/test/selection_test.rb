@@ -27,6 +27,11 @@ class SelectionSortTest < MiniTest::Test
     assert_equal expected, sorter.selection(test_numbers)
   end
 
+  def test_it_sorts_with_integers
+    sorter = SelectionSort.new
+    assert_equal [1,1,2,3,4,5],sorter.selection([4,3,2,1,5,1])
+  end
+
 
 
 end
