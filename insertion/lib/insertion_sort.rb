@@ -10,19 +10,19 @@ class InsertionSort
   #   @unsorted.shift
   # end
 
-  def sort(array)
+  def sort(unsorted, i = 0)
     sorted = []
-    unsorted = array
     sorted << unsorted.shift
     until unsorted.empty?
       if unsorted[0] < sorted[0]
-        sorted << unsorted.shift
-      elsif sorted.last == nil
+        sorted << unsorted.unshift(unsorted[0])
+        unsorted[0].delete
+      elsif unsorted[0] < sorted[i]
+        sorted << unsorted.insert(i, unsorted[0])
+      elsif unsorted[0] > sorted.last
         sorted << unsorted[0]
       else
-        sorted[i+1]
-        unsorted < sorted[i]
-        sorted << unsorted.shift
+        i+=1
       end
     end
   end
