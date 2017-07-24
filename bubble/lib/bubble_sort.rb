@@ -2,12 +2,6 @@ require 'pry'
 
 class BubbleSort
 
-  attr_reader :list
-
-  def list
-    @list = Array.new(1001) { rand(0...1000) }
-  end
-
   def bubble_sort(list)
     sorted = true
     while sorted do
