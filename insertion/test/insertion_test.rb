@@ -4,7 +4,7 @@ SimpleCov.start
 require 'pry'
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/insertion'
+require './insertion/lib/insertion'
 
 class InsertionSortTest < MiniTest::Test
 

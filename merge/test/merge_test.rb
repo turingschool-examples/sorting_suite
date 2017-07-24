@@ -4,7 +4,7 @@ SimpleCov.start
 require 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/merge'
+require './merge/lib/merge'
 
 class MergeSortTest < MiniTest::Test
 
