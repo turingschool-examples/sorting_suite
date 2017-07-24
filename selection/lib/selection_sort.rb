@@ -1,7 +1,5 @@
 class Selection
 
-  include SortingSuite
-
   def sort(array)
     new = array.length
     for i in 0...new
