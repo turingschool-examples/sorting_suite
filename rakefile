@@ -1,0 +1,6 @@
+task default: %w[test]
+
+task :test do
+  ruby "bubble/test/bubble_sort_test.rb"
+  ruby "insertion/test/insertion_sort_test.rb"
+end
