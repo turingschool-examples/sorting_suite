@@ -12,11 +12,11 @@ class BubbleSort
     index = 0
     @array = array
     swapped = true
-    size = @array.length - 1
+    # size = @array.length - 1
     while swapped
       index = 0
       swapped = false
-      while index < size
+      while index < @array.length - 1
         if @array[index] > @array[index + 1]
           swap(index)
           swapped = true
