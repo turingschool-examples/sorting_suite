@@ -11,7 +11,14 @@ class BubblesortTest < Minitest::Test
     assert_instance_of Bubblesort, sorter
   end
 
+  def test_it_sorts_a_single_letter
+    sorter = Bubblesort.new
+
+    assert_equal ["b", "d", "a", "c"], sorter.sort(["d", "b", "a", "c"])
+  end
+
   def test_it_sorts
+    skip
     sorter = Bubblesort.new
 
     assert_equal ["a", "b", "c", "d"], sorter.sort(["d", "b", "a", "c"])
