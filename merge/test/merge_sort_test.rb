@@ -19,9 +19,15 @@ class MergeSortTest < Minitest::Test
   end
 
   def test_it_can_sort_numbers
-    numbers = [3,6,2,7,3,8]
+    numbers  = [3,6,2,7,3,8]
     expected = [2,3,3,6,7,8]
     assert_equal expected, sorter.sorted(numbers)
+  end
+
+  def test_it_can_sort_mixed_letters
+    letters  = ["d","B","a","c"]
+    expected = ["B","a","c","d"]
+    assert_equal expected, sorter.sorted(letters)
   end
 
 end

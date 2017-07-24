@@ -4,14 +4,14 @@ class MergeSort
     if array.length <= 1
       array
     else
-      mid = array.length / 2
-      left = sorted(array[0..mid-1])
+      mid   = array.length / 2
+      left  = sorted(array[0..mid-1])
       right = sorted(array[mid..array.length])
       merge(left, right)
     end
   end
 
-  def merge(left, right)
+  def merge(left,right)
     if left.empty?
       right
     elsif right.empty?
