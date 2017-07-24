@@ -27,4 +27,11 @@ class InsertionSortTest < MiniTest::Test
     assert_equal expected_numbers, sorter.insert(given_numbers)
   end
 
+  def test_it_can_sort_words
+    sorter = InsertionSort.new
+    given_letters = ["d", "b", "a", "c"]
+    expected_letters = ["a", "b", "c", "d"]
+    assert_equal expected_letters, sorter.insert(given_letters)
+  end
+
 end
