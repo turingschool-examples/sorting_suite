@@ -21,7 +21,7 @@ class BubbleSortTest < Minitest::Test
   def test_it_can_sort_numbers
     sorter = BubbleSort.new
 
-    assert_equals [1, 2, 3, 4], sorter.sort[3, 1, 2, 4]
+    assert_equal [1, 2, 3, 4], sorter.sort([3, 1, 4, 2])
   end
 
 end
