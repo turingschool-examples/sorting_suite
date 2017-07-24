@@ -37,6 +37,20 @@ class SelectionSortTest < MiniTest::Test
     assert_equal (0..100).to_a + [100], sorter.selection((0..100).to_a.reverse + [100])
   end
 
+  def test_selection_sort_works_for_random_alphabet
+    sorter = SelectionSort.new
+    expected = ('a'..'z').to_a
+    test_letters = expected.shuffle
+    assert_equal expected, sorter.selection(test_letters)
+  end
+
+  def test_selection_sort_works_for_random_numbers
+    sorter = SelectionSort.new
+    expected = (0..100).to_a
+    test_numbers = expected.shuffle
+    assert_equal expected, sorter.selection(test_numbers)
+  end
+
 
 
 end
