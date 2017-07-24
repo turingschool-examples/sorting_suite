@@ -1,5 +1,5 @@
-class MergeSort
-  def sort(array, left = [], right = [])
+module MergeSort
+  def merge_sort(array, left = [], right = [])
     if array.length <= 1
       return array
     else
@@ -10,8 +10,8 @@ class MergeSort
           right << element
         end
       end
-      left = sort(left)
-      right = sort(right)
+      left = merge_sort(left)
+      right = merge_sort(right)
       merge(left, right)
     end
   end

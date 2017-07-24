@@ -1,5 +1,5 @@
-class InsertionSort
-  def sort(unsorted, sorted = [], element = nil, higher = [], lower = [])
+module InsertionSort
+  def insertion_sort(unsorted, sorted = [], element = nil, higher = [], lower = [])
     if unsorted.length > 0
       element = unsorted.shift
     end
@@ -7,7 +7,7 @@ class InsertionSort
       sorted
     elsif sorted.length == 0
       sorted << element
-      sort(unsorted, sorted)
+      insertion_sort(unsorted, sorted)
     else
       sorted.each do |sorted_element|
         if element < sorted_element
@@ -18,7 +18,7 @@ class InsertionSort
       end
       lower << element
       sorted = lower + higher
-      sort(unsorted, sorted)
+      insertion_sort(unsorted, sorted)
     end
   end
 end
