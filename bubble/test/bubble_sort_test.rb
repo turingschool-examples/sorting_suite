@@ -37,6 +37,14 @@ class BubbleSortTest < Minitest::Test
     assert_equal [0,1,2,3,4,5,6,7,8,9], sorter.array
   end
 
+  def test_it_can_sort_same_numbers
+    sorter = BubbleSort.new
+
+    sorter.sort([2,2,2,5,0,1])
+
+    assert_equal [0,1,2,2,2,5], sorter.array
+  end
+
   def test_it_can_sort_letters
     sorter = BubbleSort.new
 

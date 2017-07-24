@@ -2,8 +2,7 @@ require 'pry'
 
 class BubbleSort
 
-  attr_reader :array,
-              :index
+  attr_reader :array
 
   def initialize
     @array = []
