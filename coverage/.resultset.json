@@ -1,0 +1,34 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/Users/zacharycook/Desktop/sorting/sorting_suite/selection/lib/selection.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        6,
+        6,
+        243,
+        null,
+        6,
+        null,
+        null,
+        1,
+        245,
+        245,
+        245,
+        10809,
+        5404,
+        5404,
+        null,
+        null,
+        245,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1500905941
+  }
+}
