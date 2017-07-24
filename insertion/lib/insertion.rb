@@ -29,3 +29,9 @@ class InsertionSort
       end
   end
 end
+
+  time = Benchmark.measure do
+    sorter = InsertionSort.new
+    p sorter.insert(%w(b d f m z t r q o p w c e f j u l x n))
+  end
+  puts time
