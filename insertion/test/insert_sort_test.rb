@@ -30,16 +30,17 @@ class InsertSortTest < Minitest::Test
     sorter = InsertSort.new(['h', 'e', 'b', 'g', 'd', 'f', 'a', 'c'])
     assert_equal ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'], sorter.sort
 
-    sorter = InsertSort.new([-1, 4, 7])
-    assert_equal [-1, 4, 7], sorter.sort
+    sorter = InsertSort.new([7, 4, -1, 9, 100, -88, 23, 2])
+    assert_equal [-88, -1, 2, 4, 7, 9, 23, 100], sorter.sort
+
 
     sorter = InsertSort.new(["c", "d", "b", "a"])
-
-  sorter = InsertSort.new(["c", "d", "b", "a"])
     assert_equal ["a", "b", "c", "d"], sorter.sort
 
     sorter = InsertSort.new(["e", "a", "b", "c", "d", "f"])
     assert_equal ["a", "b", "c", "d", "e", "f"], sorter.sort
+
+
 
   end
 end
