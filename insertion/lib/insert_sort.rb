@@ -6,48 +6,80 @@ class InsertSort
 
   def initialize(arr)
     @unsorted = arr
+    @sorted = []
   end
 
 
   def sort
-    sorted = []
-    # index = 0
-    # final_index = @unsorted.length
+    @sorted << @unsorted.shift
 
-    sorted << @unsorted.shift
+    until @unsorted.empty?
 
-      until @unsorted.empty?
+      @unsorted.each do |unsorted_element|
 
-        @unsorted.each do |unsorted_element|
-
-          if unsorted_element < sorted.first
-            sorted.unshift(unsorted_element)
+        if unsorted_element < @sorted.first
+            @sorted.unshift(unsorted_element)
               @unsorted-=[unsorted_element]
 
-          elsif unsorted_element > sorted.last
-            sorted << unsorted_element
-
+        elsif unsorted_element > @sorted.last
+            @sorted << unsorted_element
             @unsorted-=[unsorted_element]
-
-          elsif
-
-            sorted.each_with_index do |sorted_element, index|
-              if sorted_element > unsorted_element
-                  sorted.insert(index-1, unsorted_element)
-                @unsorted-=[unsorted_element]
-              elsif sorted_element < unsorted_element
-                sorted.insert(index+1, unsorted_element)
-                @unsorted-=[unsorted_element]
-            else
-              break
-              end
-            end
-          end
+        else
+            sort_within_sorted_array(unsorted_element, index = 1 )
         end
       end
-      sorted
     end
+      @sorted
+  end
 
+  def sort_within_sorted_array(unsorted_element, index)
+    sorted_element = @sorted[index]
+
+    if (sorted_element[+1] == nil) && (unsorted_element < sorted_element)
+      @sorted.insert(index, unsorted_element) #maybe index -1?
+      @unsorted-=[unsorted_element]
+
+    # elsif (@sorted[index-2] == nil) && (unsorted_element < sorted_element)
+    #     @sorted.insert(index, unsorted_element) #maybe index -1?
+    #     @unsorted-=[unsorted_element]
+
+  elsif (sorted_element > unsorted_element)
+    # && (unsorted_element < @sorted[index+1])
+      @sorted.insert(index, unsorted_element) #maybe index -1?
+      @unsorted-=[unsorted_element]
+
+    elsif (sorted_element < unsorted_element) && (unsorted_element < @sorted[index+1])
+     @sorted.insert(index+1, unsorted_element) #maybe index -1?
+     @unsorted-=[unsorted_element]
+    else
+    #  =index+1
+     sort_within_sorted_array(unsorted_element, index+1)
+   end
+   @sorted
+ end
+end
+
+
+#  elsif  (sorted_element < unsorted_element) && (@sorted[index+1] > unsorted_element)
+#    @sorted.insert(index, unsorted_element) #maybe index -1?
+#    @unsorted-=[unsorted_element]
+ #
+#  elsif  && (@sorted[-1] == nil)
+#    @sorted.insert(index, unsorted_element)
+#    @unsorted-=[unsorted_element]
+ #
+#   elsif (sorted_element > unsorted_element) && (@sorted[-1] < unsorted_element)
+
+#     @sorted.each_with_index do |sorted_element, index|
+#
+#
+#       # elsif sorted_element[+1] == nil || sorted_element[-1] == nil
+#       else
+#       sort_within_sorted_array(unsorted_element)
+#       end
+#     end
+#     @sorted
+# end
 
 
 
@@ -101,5 +133,3 @@ class InsertSort
   #   end
   #   @sorted
   # end
-
-end
