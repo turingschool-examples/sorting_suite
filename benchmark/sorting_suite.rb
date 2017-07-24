@@ -20,26 +20,16 @@ module SortingSuite
 
   class InsertionSort
     def sort(array)
-      sorted = []
-      sorted << array[0]
-      array.shift
-      i = 0
-      current = array[0]
-      until array.empty?
-        if sorted[i] > current
-          sorted.insert(i, current)
-          array.shift
-          current = array[0]
-        else
-          i += 1
-          current = array[0]
-          if sorted[i].nil?
-            sorted.insert(i, current)
-            array.shift
-          end
+      array.each_with_index do |element, i|
+        current = i - 1
+        while current >= 0
+          break if array[current] <= element
+          array[current+1] = array[current]
+          current -= 1
         end
+        array[current + 1] = element
       end
-      sorted
+      array
     end
   end
 
@@ -83,12 +73,7 @@ module SortingSuite
   end
 
   class Benchmark
-    attr_accessor :array
-    def initialize
-      @array = []
-    end
-
-    def time(sort_method, array)
+def time(sort_method, array)
       start_time = Time.now
       method = sort_method.new
       method.sort(array)
@@ -111,6 +96,19 @@ module SortingSuite
       end
     end
 
+    def slowest(array)
+      bubble_sort_speed = test_bubble_sort(array)
+      insertion_sort_speed = test_insertion_sort(array)
+      merge_sort_speed = test_merge_sort(array)
+      if bubble_sort_speed < insertion_sort_speed && merge_sort_speed
+        puts "BubbleSort is the slowest"
+      elsif insertion_sort_speed < bubble_sort_speed && merge_sort_speed
+        puts "InsertionSort is the slowest"
+      elsif merge_sort_speed < bubble_sort_speed && insertion_sort_speed
+        puts "MergeSort is the slowest"
+      end
+    end
+
     def test_bubble_sort(array)
       bubble_sort = SortingSuite::BubbleSort.new
       bs_start_time = Time.now
@@ -129,7 +127,7 @@ module SortingSuite
       is_corrected_total = is_total_time * 100
      end
 
-    def test_merge_sort(array = @array)
+    def test_merge_sort(array)
       merge_sort = SortingSuite::MergeSort.new
       ms_start_time = Time.now
       merge_sort.sort(array)
@@ -146,3 +144,4 @@ benchmark.time(SortingSuite::InsertionSort, [3,3,4,5,1])
 benchmark.time(SortingSuite::MergeSort, [3,3,4,5,1])
 
 benchmark.fastest([2, 8, 1, 0, 5])
+benchmark.slowest([2, 8, 1, 0, 5])
