@@ -4,9 +4,10 @@ class BubbleSort
 
   def sort(array)
     finished = true
-    while finished = false
+    while finished
       (array.length - 1).times do |i|
-        if array[i] > array[i + 1]
+        finished = false
+        while array[i] > array[i + 1]
           array[i], array[i + 1] = array[i + 1], array[i]
           finished = true
         end
@@ -16,3 +17,5 @@ class BubbleSort
   end
 
 end
+
+# the number ONLY keeps going, and equates to true, when the values have not been properly sorted - once that occurs, it turns to false, and returns the sorted array
