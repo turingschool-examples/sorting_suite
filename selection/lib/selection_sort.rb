@@ -1,4 +1,3 @@
-
 class Selection
 
   include SortingSuite
