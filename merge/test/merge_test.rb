@@ -47,4 +47,23 @@ class MergeSortTest < Minitest::Test
 
     assert_equal expected, merge.sort(array)
   end
+
+  def test_it_can_sort_a_million_numbers
+    merge = MergeSort.new
+
+    array = []
+    1000000.times {array << rand(1..1000000)}
+
+    assert_equal array.sort, merge.sort(array)
+  end
+
+  def test_it_can_sort_five_numbers
+    merge = MergeSort.new
+
+    array = [2, 8, 1, 0, 5]
+
+    expected = [0, 1, 2, 5, 8]
+
+    assert_equal expected, merge.sort(array)
+  end
 end
