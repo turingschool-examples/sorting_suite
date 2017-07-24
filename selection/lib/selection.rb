@@ -23,6 +23,4 @@ class SelectionSort
     array.slice!(min_index)
   end
 
-
-
 end

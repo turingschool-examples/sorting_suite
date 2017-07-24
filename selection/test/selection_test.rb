@@ -51,6 +51,16 @@ class SelectionSortTest < MiniTest::Test
     assert_equal expected, sorter.selection(test_numbers)
   end
 
+  def test_single_sort_with_integer_array
+    sorter = SelectionSort.new
+    assert_equal 1, sorter.sort_pass([2,4,6,3,1,5])
+  end
+
+  def test_it_does_single_sort_pass_with_string_array
+    sorter = SelectionSort.new
+    assert_equal "Baratheon", sorter.sort_pass(["Stark","Greyjoy","Martell","Baratheon","Tully", "Tyrell"])
+  end
+
 
 
 end
