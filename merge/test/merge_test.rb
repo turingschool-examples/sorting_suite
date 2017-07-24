@@ -13,7 +13,18 @@ class MergeSortTest < MiniTest::Test
     assert sorter
   end
 
+  def test_merge_sort_returns_array
+    sorter = MergeSort.new
+    assert_kind_of Array, sorter.merge([])
+    test_letters = ["d", "b", "a", "c"]
+    assert_kind_of Array, sorter.merge(test_letters)
+  end
 
-
+  def test_merge_sort_works_for_given_set
+    sorter = MergeSort.new
+    expected = ["a", "b", "c", "d"]
+    test_letters = ["d", "b", "a", "c"]
+    assert_equal expected, sorter.merge(test_letters)
+  end
 
 end
