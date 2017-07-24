@@ -10,8 +10,7 @@ class InsertionSort
       # Else, compare it to the second sorted element. If it is smaller, insert it before the second sorted element. If it is larger, insert it after.
     # Repeat until the unsorted array is empty.
     sorted = []
-    sorted << array[0]
-    array.shift
+    sorted << array.shift
     i = 0
     current = array[0]
     until array.empty?
