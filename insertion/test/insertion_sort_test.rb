@@ -18,15 +18,6 @@ class InsertSortTest < Minitest::Test
     assert_equals ["a", "b", "c", "d"], sorter.sort(["d", "b", "a", "c"])
   end
 
-  # def test_it_can_pull_from_one_array_to_another
-  #   sorter = InsertionSort.new
-  #
-  #   sorter.start([3, 4, 0, 6])
-  #
-  #   assert_equal [4, 0, 6], sorter.unsorted
-  #   assert_equal [3], sorter.sorted
-  # end
-
   def test_it_can_sort_numbers
     sorter = InsertionSort.new
 
