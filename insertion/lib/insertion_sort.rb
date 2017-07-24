@@ -17,14 +17,14 @@ class InsertionSort
     while unsorted[0] != nil
       if sorted[index] != nil
         if unsorted[0] < sorted[index]
-          @sorted.insert(index, unsorted[0])
+          @sorted.insert(index, @unsorted[0])
           @unsorted.shift
           index = 0
         else
           index += 1
         end
       else
-        @sorted.push(unsorted[0])
+        @sorted.push(@unsorted[0])
         @unsorted.shift
         index = 0
       end

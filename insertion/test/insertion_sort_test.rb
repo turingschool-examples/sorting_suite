@@ -29,4 +29,12 @@ class InsertionSortTest < Minitest::Test
     assert_equal [0,1,2,2,2,5], sorter.sorted
   end
 
+  def test_it_can_sort_letters
+    sorter = InsertionSort.new
+
+    sorter.sort (["e", "a", "c", "b", "d"])
+
+    assert_equal (["a", "b", "c", "d", "e"]), sorter.sorted
+  end
+
 end
