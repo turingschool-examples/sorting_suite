@@ -21,6 +21,14 @@ class InsertionSortTest < Minitest::Test
     assert_equal [3,4], sorter.sorted
   end
 
+  def test_unsorted_is_empty
+    sorter = InsertionSort.new
+
+    sorter.sort([3,4])
+
+    assert_equal [], sorter.unsorted
+  end
+
   def test_it_can_sort_jumbled_numbers
     sorter = InsertionSort.new
 

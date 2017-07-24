@@ -12,7 +12,6 @@ class BubbleSort
     index = 0
     @array = array
     swapped = true
-    # size = @array.length - 1
     while swapped
       index = 0
       swapped = false
