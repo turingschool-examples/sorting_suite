@@ -2,7 +2,7 @@ require 'pry'
 require 'benchmark'
 class BubbleSort
 
-  def swaper(unsorted_items)
+  def bubble(unsorted_items)
     number_swaper = 1
       until number_swaper == unsorted_items.length
 
