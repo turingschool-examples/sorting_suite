@@ -31,25 +31,24 @@ class MergeSort
   end
 
   def array_comparer(first, second)
-  combined = []
-  until first.empty? || second.empty?
-    if ( first[0] > second[0])
-      combined << second[0]
-      second.shift
-    else
+    combined = []
+    until first.empty? || second.empty?
+      if ( first[0] > second[0])
+        combined << second[0]
+        second.shift
+      else
+        combined << first[0]
+        first.shift
+      end
+    end
+    until first.empty?
       combined << first[0]
       first.shift
     end
+    until second.empty?
+      combined << second[0]
+      second.shift
+    end
+    combined
   end
-  until first.empty?
-    combined << first[0]
-    first.shift
-  end
-  until second.empty?
-    combined << second[0]
-    second.shift
-  end
-  combined
-end
-
 end
