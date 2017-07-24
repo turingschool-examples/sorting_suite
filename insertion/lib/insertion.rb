@@ -3,18 +3,21 @@ require 'pry'
 class Insertion
 
   def sort(array)
-    to_insert = array.shift
-    # compare against sorted list
-    until done
-      if to_insert > sorted_list[n]
-        # next
-      else
-        # insert number
-      end
-
-
-
+    results = [array.shift]
+    array.each do |unit|
+        n = 0
+        while n < results.length
+          if unit <= results[n]
+            results.insert(n, unit)
+            break
+          elsif n == results.length - 1
+            results.insert(n + 1, unit)
+            break
+          end
+          n += 1
+        end
     end
+    results
   end
 
 end
