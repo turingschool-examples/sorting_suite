@@ -22,13 +22,4 @@ class SelectionSort
     end
     array.slice!(min_index)
   end
-
 end
-
-time = Benchmark.measure do
-  sorter = SelectionSort.new
-  # p sorter.merge(%w(b d f m z t r q o p w c e f j u l x n))
-  # p sorter.merge(('a'..'z').to_a.shuffle)
-  p sorter.selection((0..100).to_a.shuffle)
-end
-puts time

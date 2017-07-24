@@ -3,7 +3,6 @@ require 'benchmark'
 class BubbleSort
 
   def swaper(unsorted_items)
-    # unsorted_items
     number_swaper = 1
       until number_swaper == unsorted_items.length
 
@@ -12,7 +11,7 @@ class BubbleSort
           next unless compare
 
           if item > compare
-            unsorted_items = evaluate_sorted(index, unsorted_items) #calling method below
+            unsorted_items = evaluate_sorted(index, unsorted_items)
           end
 
         end
@@ -29,10 +28,3 @@ class BubbleSort
   end
 
 end
-
-time = Benchmark.measure do
-  sorter = BubbleSort.new
-  # p sorter.swaper(["d", "b", "a", "c"])
-  p sorter.swaper(('a'..'z').to_a.shuffle)
-end
-puts time

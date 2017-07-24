@@ -14,7 +14,7 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-24T00:14:43-06:00">2017-07-24T00:14:43-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-24T08:15:34-06:00">2017-07-24T08:15:34-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1480.5
+         1441.2
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>1</b> files in total.
-    <b>20</b> relevant lines. 
-    <span class="green"><b>20</b> lines covered</span> and
+    <b>16</b> relevant lines. 
+    <span class="green"><b>16</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#0e782d0f19e61988a7415ef0da5718bbe4669c2c" class="src_link" title="selection/lib/selection.rb">selection/lib/selection.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>34</td>
-        <td>20</td>
-        <td>20</td>
+        <td>25</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
-        <td>1480.5</td>
+        <td>1441.2</td>
       </tr>
       
     </tbody>
@@ -81,8 +81,8 @@
     <h3>selection/lib/selection.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>20</b> relevant lines. 
-      <span class="green"><b>20</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -126,20 +126,20 @@
           <code class="ruby">  def selection(array)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="7">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="6" data-linenumber="7">
+          <span class="hits">6</span>
           
           <code class="ruby">    sorted_array = []</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="8">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="6" data-linenumber="8">
+          <span class="hits">6</span>
           
           <code class="ruby">    until array.length == 0 do</code>
         </li>
       
-        <li class="covered" data-hits="344" data-linenumber="9">
-          <span class="hits">344</span>
+        <li class="covered" data-hits="243" data-linenumber="9">
+          <span class="hits">243</span>
           
           <code class="ruby">      sorted_array &lt;&lt; sort_pass(array)</code>
         </li>
@@ -150,8 +150,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="11">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="6" data-linenumber="11">
+          <span class="hits">6</span>
           
           <code class="ruby">    sorted_array</code>
         </li>
@@ -174,38 +174,38 @@
           <code class="ruby">  def sort_pass(array)</code>
         </li>
       
-        <li class="covered" data-hits="346" data-linenumber="15">
-          <span class="hits">346</span>
+        <li class="covered" data-hits="245" data-linenumber="15">
+          <span class="hits">245</span>
           
           <code class="ruby">    min = array[0]</code>
         </li>
       
-        <li class="covered" data-hits="346" data-linenumber="16">
-          <span class="hits">346</span>
+        <li class="covered" data-hits="245" data-linenumber="16">
+          <span class="hits">245</span>
           
           <code class="ruby">    min_index = 0</code>
         </li>
       
-        <li class="covered" data-hits="346" data-linenumber="17">
-          <span class="hits">346</span>
+        <li class="covered" data-hits="245" data-linenumber="17">
+          <span class="hits">245</span>
           
           <code class="ruby">    array.each_index do |i|</code>
         </li>
       
-        <li class="covered" data-hits="15960" data-linenumber="18">
-          <span class="hits">15960</span>
+        <li class="covered" data-hits="10809" data-linenumber="18">
+          <span class="hits">10809</span>
           
           <code class="ruby">      if array[i] &lt; min</code>
         </li>
       
-        <li class="covered" data-hits="5946" data-linenumber="19">
-          <span class="hits">5946</span>
+        <li class="covered" data-hits="5502" data-linenumber="19">
+          <span class="hits">5502</span>
           
           <code class="ruby">        min = array[i]</code>
         </li>
       
-        <li class="covered" data-hits="5946" data-linenumber="20">
-          <span class="hits">5946</span>
+        <li class="covered" data-hits="5502" data-linenumber="20">
+          <span class="hits">5502</span>
           
           <code class="ruby">        min_index = i</code>
         </li>
@@ -222,8 +222,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="346" data-linenumber="23">
-          <span class="hits">346</span>
+        <li class="covered" data-hits="245" data-linenumber="23">
+          <span class="hits">245</span>
           
           <code class="ruby">    array.slice!(min_index)</code>
         </li>
@@ -237,61 +237,7 @@
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
           <code class="ruby">end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
-          
-          <code class="ruby">time = Benchmark.measure do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="29">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  sorter = SelectionSort.new</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="30">
-          
-          
-          <code class="ruby">  # p sorter.merge(%w(b d f m z t r q o p w c e f j u l x n))</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="31">
-          
-          
-          <code class="ruby">  # p sorter.merge((&#39;a&#39;..&#39;z&#39;).to_a.shuffle)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="32">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  p sorter.selection((0..100).to_a.shuffle)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="33">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="34">
-          <span class="hits">1</span>
-          
-          <code class="ruby">puts time</code>
         </li>
       
     </ol>

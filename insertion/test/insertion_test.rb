@@ -13,13 +13,6 @@ class InsertionSortTest < MiniTest::Test
     assert sorter
   end
 
-  def test_it_can_hold_an_argument
-    skip
-    sorter = InsertionSort.new
-    expected_numbers = [1,0,4,3,2]
-    assert_equal expected_numbers, sorter.insert(expected_numbers)
-  end
-
   def test_it_can_sort_numbers
     sorter = InsertionSort.new
     given_numbers = [1,0,4,3,2]

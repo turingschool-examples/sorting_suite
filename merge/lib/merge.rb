@@ -52,12 +52,3 @@ class MergeSort
     combined
   end
 end
-
-
-time = Benchmark.measure do
-  sorter = MergeSort.new
-  # p sorter.merge(%w(b d f m z t r q o p w c e f j u l x n))
-  # p sorter.merge(('a'..'z').to_a.shuffle)
-  p sorter.merge((0..100).to_a.shuffle)
-end
-puts time

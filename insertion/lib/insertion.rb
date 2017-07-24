@@ -1,16 +1,14 @@
 require 'pry'
 require 'benchmark'
 
-
 class InsertionSort
 
   def insert(unsorted_items)
-    # unsorted_items
     @sorted_items = []
     @sorted_items[0] = unsorted_items.shift
     until unsorted_items.empty?
       to_place = unsorted_items[0]
-      order_in_new_array(to_place) #method below
+      order_in_new_array(to_place)
       unsorted_items.shift
     end
     @sorted_items
@@ -30,9 +28,3 @@ class InsertionSort
       end
   end
 end
-
-  time = Benchmark.measure do
-    sorter = InsertionSort.new
-    p sorter.insert(%w(b d f m z t r q o p w c e f j u l x n))
-  end
-  puts time
