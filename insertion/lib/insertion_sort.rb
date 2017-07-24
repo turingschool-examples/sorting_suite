@@ -26,6 +26,7 @@ class InsertionSort
       else
         @sorted.push(unsorted[0])
         @unsorted.shift
+        index = 0
       end
     end
     #     if unsorted[0] < sorted[index]
