@@ -28,9 +28,4 @@ class InsertionSort
         end
       end
   end
-
-
-
-
-
 end

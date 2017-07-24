@@ -34,4 +34,18 @@ class InsertionSortTest < MiniTest::Test
     assert_equal expected_letters, sorter.insert(given_letters)
   end
 
+  def test_it_can_sort_random_numbers
+    sorter = InsertionSort.new
+    expected = (1..100).to_a
+    test_numbers = expected.shuffle
+    assert_equal expected, sorter.insert(test_numbers)
+  end
+
+  def test_if_insertion_sort_works_for_random_letters
+    sorter = InsertionSort.new
+    expected = ("a".."z").to_a
+    test_letters = expected.shuffle
+    assert_equal expected, sorter.insert(test_letters)
+  end
+
 end
