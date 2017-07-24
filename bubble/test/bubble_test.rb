@@ -4,6 +4,12 @@ require 'minitest/pride'
 
 class BubbleTest < Minitest::Test
 
+  def test_it_exists
+    bubble = Bubble.new
+
+    assert_equal Bubble, bubble.class
+  end
+
   def test_it_can_sort_numbers
     bubble = Bubble.new
     array = [5, 2, 3, 6, 1, 4, 9, 7, 8]
