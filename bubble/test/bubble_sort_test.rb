@@ -14,4 +14,10 @@ class BubbleSortTest < Minitest::Test
     assert_equal [], sorted.sort(argue)
   end
 
+  def test_sort_returns_output
+    sorted = BubbleSort.new
+    argue = [4, 2, 0, 3, 1]
+    
+    assert_equal [0,1,2,3,4], sorted.sort(argue)
+  end
 end
