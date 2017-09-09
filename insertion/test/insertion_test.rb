@@ -11,6 +11,7 @@ class InsertionSortTest < Minitest::Test
   def test_check_if_sort_method_works
     insertion = InsertionSort.new
 
+    assert_equal ["a", "b", "c", "d"], insertion.sort(["d", "b", "a", "c"])
     assert_equal [0,1,2,3,4], insertion.sort([1,0,4,3,2])
   end
 
