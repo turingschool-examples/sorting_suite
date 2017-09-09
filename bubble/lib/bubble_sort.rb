@@ -2,11 +2,10 @@ require 'pry'
 
 class BubbleSort
 
-
-  def sort
-    
+  def sort(argue)
+    argue
   end
 
-
 end
+
 
