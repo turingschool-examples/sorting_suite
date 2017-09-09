@@ -2,7 +2,7 @@ require 'pry'
 class BubbleSort
 
   def sort(source)
-    source.dup.sort!
+    sort!(source.dup)
   end
 
   def sort!(array)
