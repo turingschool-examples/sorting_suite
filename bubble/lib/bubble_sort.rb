@@ -2,6 +2,7 @@ require "pry"
 class BubbleSort
 
   def sort(array)
+    return array if array.length <= 1
     count = 0
     length = array.length - 1
     length.times do |index|
