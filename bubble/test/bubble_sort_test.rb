@@ -19,8 +19,6 @@ class BubbleSortTest < Minitest::Test
     sorter = BubbleSort.new
 
     assert_equal [], sorter.sort
-
-    ([])
   end
 
   def test_if_sort_method_sorts_an_one_element_array
