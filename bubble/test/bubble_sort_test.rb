@@ -18,7 +18,7 @@ class BubbleSortTest < Minitest::Test
   def test_if_sort_method_sorts_an_empty_array
     sorter = BubbleSort.new
 
-    assert_equal [], sorter.sort
+    assert_equal [], sorter.sort([])
   end
 
   def test_if_sort_method_sorts_an_one_element_array
