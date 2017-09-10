@@ -2,22 +2,22 @@ require 'pry'
 class BubbleSort
 
   def sort(source)
-    sort!(source.dup)
+    self.sort!(source.dup)
   end
 
   def sort!(array)
     loop do
-      found_pass = false
+      run_without_changes = true
       bubble = array.shift
-      array.each_with_index do |compare, compare_at|
-        if bubble < compare
+      array.each_with_index do |compare_to, compare_at|
+        if bubble < compare_to
           array[compare_at], bubble = bubble, array[compare_at]
-        elsif bubble > compare
-          found_pass = true
+        elsif bubble > compare_to
+          run_without_changes = false
         end
       end
-      array.push bubble
-      break unless found_pass
+      array << bubble
+      break if run_without_changes
     end
     array
   end
