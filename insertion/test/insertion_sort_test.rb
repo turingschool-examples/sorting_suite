@@ -21,8 +21,8 @@ class InsertionSortTest < Minitest::Test
     assert_equal expected, actual
   end
 
-  def test_insert_inputs_entry_accordingly_into_sorted_array
-    actual = @sorter.insert("b", ["a", "c"])
+  def test_insert_entry_inputs_entry_accordingly_into_sorted_array
+    actual = @sorter.insert_entry("b", ["a", "c"])
     expected = ["a", "b", "c"]
 
     assert_equal expected, actual
@@ -41,4 +41,21 @@ class InsertionSortTest < Minitest::Test
 
     assert_equal expected, actual
   end
+
+  def test_inplace_sort_sorts_letters_in_array_of_four_letters
+    array = [0, 1, 2, 3, 4]
+    actual = InsertionSort.new(array).inplace_sort
+    expected = [0, 1, 2, 3, 4]
+
+    assert_equal expected, actual
+  end
+
+  def test_inplace_sort_does_not_create_a_new_array
+    array = [4, 0, 2, 3, 1]
+    actual = InsertionSort.new(array).inplace_sort.object_id
+    expected = array.object_id
+
+    assert_equal expected, actual
+  end
+
 end
