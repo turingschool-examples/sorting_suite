@@ -30,8 +30,8 @@ class BubbleSortTest < Minitest::Test
 
   def test_combination_of_letters_and_numbers
     sorted = BubbleSort.new
-    argue = ["e", "a", "1", "b","8"]
+    argue = ["e", "a", "1", "b", "8"]
 
-    assert_equal ["1", "a", "b", "e","8"], sorted.sort(argue)
+    assert_equal ["1", "8", "a", "b", "e"], sorted.sort(argue)
   end
 end
