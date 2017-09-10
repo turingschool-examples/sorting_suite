@@ -1,4 +1,4 @@
-require 'pry'
+
 class BubbleSort
 
 
@@ -7,9 +7,9 @@ class BubbleSort
     loop do
     swapped = false
 
-        (length - 1).times do |n|
-          if list[n] > list[n+1]
-           list[n], list[n+1] = list[n+1], list[n]
+        (length - 1).times do |index|
+          if list[index] > list[index+1]
+           list[index], list[index+1] = list[index+1], list[index]
            swapped = true
           end
         end

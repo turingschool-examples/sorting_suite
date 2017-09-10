@@ -16,7 +16,24 @@ class BubbleSortTest < Minitest::Test
 
   def test_sorts_numbers
     sorter = BubbleSort.new
-    assert_equal [2, 4, 4, 7, 8, 9, 10], sorter.sort([2,4,9,7,8,4,10])
+    assert_equal [2, 4, 7, 8, 9, 10], sorter.sort([2,9,7,8,4,10])
   end
+
+  def test_sorts__array_with_duplicates
+    sorter = BubbleSort.new
+    assert_equal [2, 4, 4, 7, 8, 8,  9, 10], sorter.sort([8,4,2,9,7,8,4,10])
+  end
+
+  def test_sorts__array_that_is_already_sorted
+    sorter = BubbleSort.new
+    assert_equal [1,2,3,4,5], sorter.sort([1,2,3,4,5])
+  end
+
+  def test_sorts__array_with_empty_string
+    sorter = BubbleSort.new
+    assert_equal [" ", "c", "g"], sorter.sort(["g", "c", " "])
+  end
+
+
 
 end
