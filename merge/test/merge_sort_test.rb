@@ -12,6 +12,6 @@ class MergeSortTest < Minitest::Test
   def test_merge_sorts_string
     sorter = MergeSort.new
 
-    assert_equal , sorter.sort(["d", "b", "a", "c"])
+    assert_equal ["a", "b", "c", "d"], sorter.sort(["d", "b", "a", "c"])
   end
 end
