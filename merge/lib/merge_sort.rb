@@ -1,24 +1,31 @@
 class MergeSort
 
   def sort(array)
-    size = array.length
-    position = 0
-    sorted = []
-    while position < size
-      left_side = array[0..(size / 2) - 1]
-      right_side = array[(size / 2)..size]
-      if left_side[position] < right_side[position]
-        sorted << left_side[position]
-      elsif left_side[position] > right_side[position]
-        sorted << right_side[position]
-      else
-        sorted << right_side[position]
-        sorted << left_side[position]
-      end
-      position += 1
+    if array.length <=1
+      array
+    else
+      mid = (array.length / 2).floor
+      left_side = sort(array[0..mid- 1])
+      right_side = sort(array[mid..array.length])
+      merge(left_side, right_side)
     end
 
-    return array
   end
+
+  def merge(left, right)
+    if left.empty?
+      right
+    elsif right.empty?
+      left
+    elsif left.first > right.first
+      [left.first] + merge(left[1..left.length], right)
+    else
+      [right.first] + merge(left, right[1..right.length])
+    end
+  end
+
+
+
+
 
 end

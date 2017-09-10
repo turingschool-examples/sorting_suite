@@ -8,7 +8,7 @@ class MergeSortTest < Minitest::Test
     assert_instance_of MergeSort, merged
   end
 
-  def test_insertion_sort_returns_correct_array
+  def test_merge_sort_returns_correct_array
     merged = MergeSort.new
     expected = merged.sort(['d', 'b', 'a', 'c'])
     actual = ['a', 'b', 'c', 'd']
