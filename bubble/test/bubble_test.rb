@@ -4,7 +4,7 @@ require './lib/bubble_sort'
 
 class BubbleTest < Minitest::Test
 
-  def test_bubble_exists
+  def test_bubble_sort_exists
     sorter = BubbleSort.new
 
     assert_instance_of BubbleSort, sorter
