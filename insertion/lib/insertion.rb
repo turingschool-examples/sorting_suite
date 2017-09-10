@@ -1,3 +1,0 @@
-class Insertion
-
-end
