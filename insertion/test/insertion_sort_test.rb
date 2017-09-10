@@ -7,4 +7,10 @@ class InsertionSortTest < Minitest::Test
     assert_instance_of InsertionSort, InsertionSort.new
   end
 
+  def test_sort_method_takes_an_arguement
+    sorted = InsertionSort.new
+    argue = []
+
+    assert_equal [], sorted.sort(argue)
+  end
 end
