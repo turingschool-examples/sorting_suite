@@ -5,21 +5,19 @@ class InsertionSort
     final = [list[0]]
     list.delete_at(0)
 
-    for i in list
+    list.each do |item|
         final_index = 0
         while final_index < final.length
-            if i <= final[final_index]
-                final.insert(final_index,i)
+            if item <= final[final_index]
+                final.insert(final_index,item)
                 break
-                binding.pry
             elsif final_index == final.length-1
-                final.insert(final_index+1,i)
+                final.insert(final_index+1,item)
                 break
             end
             final_index+=1
         end
     end
-    binding.pry
 
     final
   end
