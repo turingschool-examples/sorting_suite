@@ -20,4 +20,11 @@ class BubbleSortTest < Minitest::Test
     
     assert_equal [0,1,2,3,4], sorted.sort(argue)
   end
+
+  def test_if_swap_returns_true
+    sorted = BubbleSort.new
+    argue = ["d", "b", "a", "c"]
+
+    assert_equal ["a", "b", "c", "d"], sorted.sort(argue)
+  end
 end
