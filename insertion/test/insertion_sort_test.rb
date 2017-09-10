@@ -23,6 +23,7 @@ class TestInsertionSort < Minitest::Test
     insertion = InsertionSort.new
 
     assert_equal [1, 2, 3, 4], insertion.sort([4, 2, 1, 3])
+    assert_equal ["a", "b", "c", "d"], insertion.sort(["d", "b", "a", "c"])
   end
 
 end
