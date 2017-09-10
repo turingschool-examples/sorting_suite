@@ -1,19 +1,21 @@
 class BubbleSort
-  attr_reader :array, :n
 
-  def initialize(array)
-    @array = array
-    @n = array.length
-  end
+  def sort(array)
+    n = array.length
 
-  def check_if_next_element_is_bigger
-    if array[n - 1] > array[n]
-      swap
+    loop do
+      swapped = false
+
+      (n-1).times do |x|
+        if array[x] > array[x+1]
+          array[x],array[x+1] = array[x+1],array[x]
+          swapped = true
+        end
+      end
+
+      break if not swapped
     end
-  end
 
-  def sort
-    array[n - 1], array[n] = array[n],array[n - 1]
+    array
   end
-
 end
