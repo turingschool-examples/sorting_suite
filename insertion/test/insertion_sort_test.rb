@@ -11,12 +11,12 @@ class TestInsertionSort < Minitest::Test
     assert_instance_of InsertionSort, insertion
   end
 
-  def test_insert_new_places_to_insert_in_sorted_array
+  def test_insert_sorted_value_places_to_insert_in_sorted_array
     insertion = InsertionSort.new
 
-    assert_equal [1, 2], insertion.insert_new(1, [2])
-    assert_equal [1, 2], insertion.insert_new(2, [1])
-    assert_equal [1, 2, 3, 4, 5], insertion.insert_new(3, [1, 2, 4, 5])
+    assert_equal [1, 2], insertion.insert_sorted_value([2], 1)
+    assert_equal [1, 2], insertion.insert_sorted_value([1], 2)
+    assert_equal [1, 2, 3, 4, 5], insertion.insert_sorted_value([1, 2, 4, 5], 3)
   end
 
   def test_sort_sorts_unsorted_array
