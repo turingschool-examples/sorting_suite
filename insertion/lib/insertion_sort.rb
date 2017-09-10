@@ -1,9 +1,9 @@
 class InsertionSort
 
-  attr_reader :provided_array
+  attr_reader :provided
 
-  def initialize(provided_array = [])
-      @provided_array = provided_array
+  def initialize(provided = [])
+      @provided = provided
   end
 
   def sort(unsorted)
@@ -26,7 +26,7 @@ class InsertionSort
     sorted.find { |element| entry < element }
   end
 
-  def inplace_sort(sortee = @provided_array)
+  def inplace_sort(sortee = @provided)
     repeats = sortee.count
     repeats.times do
       insert_entry(sortee.pop, sortee)

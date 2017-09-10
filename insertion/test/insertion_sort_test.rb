@@ -42,8 +42,8 @@ class InsertionSortTest < Minitest::Test
     assert_equal expected, actual
   end
 
-  def test_inplace_sort_sorts_letters_in_array_of_four_letters
-    array = [0, 1, 2, 3, 4]
+  def test_inplace_sort_sorts_an_array_from_least_to_greatest
+    array = [4, 0, 2, 3, 1]
     actual = InsertionSort.new(array).inplace_sort
     expected = [0, 1, 2, 3, 4]
 
