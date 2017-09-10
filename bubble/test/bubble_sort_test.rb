@@ -21,7 +21,7 @@ class BubbleSortTest < Minitest::Test
     assert_equal expected, actual
   end
 
-  def test_single_pass_sort_sorts_each_pair_of_letters_in_array
+  def test_single_pass_sort_sorts_each_consecutive_pair_of_letters_in_array_once
     actual = @sorter.single_pass_sort(["c", "b", "a"])
     expected = ["b", "a", "c"]
 
