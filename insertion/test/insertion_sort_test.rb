@@ -16,6 +16,7 @@ class TestInsertionSort < Minitest::Test
 
     assert_equal [1, 2], insertion.insert_new(1, [2])
     assert_equal [1, 2], insertion.insert_new(2, [1])
+    assert_equal [1, 2, 3, 4, 5], insertion.insert_new(3, [1, 2, 4, 5])
   end
 
   def test_sort_takes_unsorted_array
