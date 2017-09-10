@@ -21,10 +21,17 @@ class InsertionSortTest < Minitest::Test
     assert_equal [0,1,2,3,4], sorted.sort(argue)
   end
 
-  def test_if_swap_returns_true
+  def test_sort_returns_correct_output
     sorted = InsertionSort.new
     argue = ["d", "b", "a", "c"]
 
     assert_equal ["a", "b", "c", "d"], sorted.sort(argue)
+  end
+
+  def test_combination_of_letters_and_numbers
+    sorted = InsertionSort.new
+    argue = ["e", "a", "1", "b", "8"]
+
+    assert_equal ["1", "8", "a", "b", "e"], sorted.sort(argue)
   end
 end
