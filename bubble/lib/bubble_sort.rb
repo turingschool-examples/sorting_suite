@@ -16,7 +16,7 @@ class BubbleSort
     else
       sorted
     end
- end
+  end
 
   def sort(letters)
     sorted = letters.each_with_index do |letter, index|

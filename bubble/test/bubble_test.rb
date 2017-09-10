@@ -33,5 +33,4 @@ class BubbleTest < Minitest::Test
     assert_equal ['a', 'b', 'c', 'd'], actual
   end
 
-
 end
