@@ -13,4 +13,18 @@ class InsertionSortTest < Minitest::Test
 
     assert_equal [], sorted.sort(argue)
   end
+
+  def test_sort_returns_output
+    sorted = InsertionSort.new
+    argue = [1,0,4,3,2]
+    
+    assert_equal [0,1,2,3,4], sorted.sort(argue)
+  end
+
+  def test_if_swap_returns_true
+    sorted = InsertionSort.new
+    argue = ["d", "b", "a", "c"]
+
+    assert_equal ["a", "b", "c", "d"], sorted.sort(argue)
+  end
 end
