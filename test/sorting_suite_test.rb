@@ -39,7 +39,7 @@ SortingSuite.each_class do |sort_class|
       end
       it("changes the given array") do
         original_numbers = basic_numbers.dup
-        sorter.sort(basic_numbers)
+        sorter.sort!(basic_numbers)
         basic_numbers.must_equal(original_numbers.sort)
       end
     end

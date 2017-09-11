@@ -5,6 +5,7 @@ class SortingSuite::BubbleSort
   end
 
   def sort!(array)
+    return [] if array.empty?
     loop do
       run_without_changes = true
       bubble = array.shift
