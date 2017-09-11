@@ -1,15 +1,13 @@
 class BubbleSort
 
   def sort(sortee)
-    repeats = sortee.count
-    repeats.times { single_pass_sort(sortee) }
+    element_count = sortee.count
+    element_count.times { single_pass_sort(sortee) }
     sortee
   end
 
   def single_pass_sort(sortee)
-    sortee.each_index do |index|
-      pair_sort(sortee, index)
-    end
+    sortee.each_index { |index| pair_sort(sortee, index) }
   end
 
   def pair_sort(sortee, index)

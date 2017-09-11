@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/emoji'
-require './lib/insertion_sort'
+require_relative '../lib/insertion_sort'
 
 class InsertionSortTest < Minitest::Test
 
@@ -24,6 +24,13 @@ class InsertionSortTest < Minitest::Test
   def test_insert_entry_inputs_entry_accordingly_into_sorted_array
     actual = @sorter.insert_entry("b", ["a", "c"])
     expected = ["a", "b", "c"]
+
+    assert_equal expected, actual
+  end
+
+  def test_insert_entry_inputs_entry_last_into_sorted_array_if_greater_than_existing_elements
+    actual = @sorter.insert_entry("d", ["a","c"])
+    expected = ["a", "c", "d"]
 
     assert_equal expected, actual
   end

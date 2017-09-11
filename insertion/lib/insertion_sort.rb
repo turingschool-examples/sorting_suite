@@ -27,8 +27,8 @@ class InsertionSort
   end
 
   def inplace_sort(sortee = @provided)
-    repeats = sortee.count
-    repeats.times do
+    element_count = sortee.count
+    element_count.times do
       insert_entry(sortee.pop, sortee)
     end
     sortee

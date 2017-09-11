@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/emoji'
-require './lib/bubble_sort'
+require_relative '../lib/bubble_sort'
 
 class BubbleSortTest < Minitest::Test
 
