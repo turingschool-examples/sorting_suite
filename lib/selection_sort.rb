@@ -1,4 +1,4 @@
-class SelectionSort
+class SortingSuite::SelectionSort
   #I think it's wrong to use #min here, otherwise would be cleaner
 
   def sort(source)

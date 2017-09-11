@@ -1,5 +1,4 @@
-require 'pry'
-class BubbleSort
+class SortingSuite::BubbleSort
 
   def sort(source)
     self.sort!(source.dup)

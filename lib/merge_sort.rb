@@ -1,4 +1,4 @@
-class MergeSort
+class SortingSuite::MergeSort
 
   def sort!(array)
     array.replace(sort(array))

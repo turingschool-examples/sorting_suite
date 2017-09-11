@@ -1,4 +1,4 @@
-class InsertionSort
+class SortingSuite::InsertionSort
 
   def sort(source)
     sorted = []
@@ -19,6 +19,7 @@ class InsertionSort
 
 
   def sort!(array)
+    return [] if array.empty?
     sorted_upto = 0
     until sorted_upto == (array.length - 1)
       to_insert = array.pop
