@@ -20,11 +20,15 @@ class SelectionSort
     end
   end
 
-  def selection_sort(unsorted)
-    sorted = []
+  def sort(unsorted, sorted)
     until unsorted.empty?
       lowest(unsorted, sorted)
     end
+  end
+
+  def selection_sort(unsorted)
+    sorted = []
+    sort(unsorted, sorted)
     check_last(sorted)
     sorted
   end
