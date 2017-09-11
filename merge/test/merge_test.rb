@@ -34,4 +34,10 @@ class MergeTest < Minitest::Test
     assert_equal ["a", "b", "c", "d"], merge.positioning(["d", "b"], ["a", "c"])
   end
 
+  def test_
+    merge = Merge.new
+
+    assert_equal ["a", "b", "c", "d"], merge.positioning_single_element("b", ["a", "c", "d"], 0)
+  end
+
 end
