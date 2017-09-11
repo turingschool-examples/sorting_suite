@@ -1,6 +1,10 @@
 require 'pry'
 class Bubblesort
 
+  def initialize
+
+  end
+
   def sort(array)
     size = array.length
 
