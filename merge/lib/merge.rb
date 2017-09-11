@@ -1,5 +1,6 @@
 class Merge
   def sort(array)
+    return array if array.nil? || array.length <= 1 
     sorted = []
     until array.empty?
       first_array(sorted, array)

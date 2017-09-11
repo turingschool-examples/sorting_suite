@@ -34,10 +34,22 @@ class MergeTest < Minitest::Test
     assert_equal ["a", "b", "c", "d"], merge.positioning(["d", "b"], ["a", "c"])
   end
 
-  def test_
+  def test_if_positioning_single_element_method_works
     merge = Merge.new
 
     assert_equal ["a", "b", "c", "d"], merge.positioning_single_element("b", ["a", "c", "d"], 0)
+  end
+
+  def test_if_array_is_empty
+    merge = Merge.new
+
+    assert_equal [], merge.sort([])
+  end
+
+  def test_if_array_is_empty
+    merge = Merge.new
+
+    assert_equal nil, merge.sort(nil)
   end
 
 end
