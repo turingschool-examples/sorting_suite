@@ -39,5 +39,6 @@ class InsertionSortTest < Minitest::Test
     sorted = InsertionSort.new
 
     assert_equal ["1", "8", "a", "b", "e"], sorted.sorting(["1", "8", "b", "e"],"a",0)
+    assert_equal ["1", "8", "a", "b", "e"], sorted.sorting(["1", "8", "a", "b"],"e",0)
   end
 end
