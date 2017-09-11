@@ -1,19 +1,19 @@
 class MergeSort
 
   def sort(array)
-    def merge(left_sorted, right_sorted)
+    def merge(left, right)
       sorted = []
       l = 0
       r = 0
 
       loop do
-        break if r >= right_sorted.length && l >= left_sorted.length
+        break if r >= right.length && l >= left.length
 
-        if r >= right_sorted.length || (l < left_sorted.length && left_sorted[l] < right_sorted[r])
-          sorted << left_sorted[l]
+        if r >= right.length || (l < left.length && left[l] < right[r])
+          sorted << left[l]
           l += 1
         else
-          sorted << right_sorted[r]
+          sorted << right[r]
           r += 1
         end
       end
@@ -21,15 +21,15 @@ class MergeSort
       return sorted
     end
 
-    def mergesort_iter(array_sliced)
-      return array_sliced if array_sliced.length <= 1
+    def merge_sort(letters)
+      return letters if letters.length <= 1
 
-      mid = array_sliced.length/2 - 1
-      left_sorted = mergesort_iter(array_sliced[0..mid])
-      right_sorted = mergesort_iter(array_sliced[mid+1..-1])
-      return merge(left_sorted, right_sorted)
+      mid = letters.length/2 - 1
+      left = merge_sort(letters[0..mid])
+      right = merge_sort(letters[mid+1..-1])
+      return merge(left, right)
     end
 
-    mergesort_iter(array)
+    merge_sort(array)
   end
 end
