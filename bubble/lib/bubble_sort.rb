@@ -4,7 +4,6 @@ class BubbleSort
     return array if array.length <= 1
     length = array.length - 1
     sorting(array, length)
-    array
   end
 
   def sorting(array, length, count = 0)
@@ -15,5 +14,6 @@ class BubbleSort
       end
     end
     sort(array) if count == 1
+    array
   end
 end

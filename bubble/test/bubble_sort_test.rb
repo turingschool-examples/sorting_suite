@@ -32,4 +32,11 @@ class BubbleSortTest < Minitest::Test
 
     assert_equal ["1", "b", "c", "d"], sorter.sort(["d", "b", "1", "c"])
   end
+
+  def test_if_sorting_method_works
+    sorter = BubbleSort.new
+
+    assert_equal ["1", "b", "c", "d"], sorter.sorting(["1", "b", "c", "d"], 3)
+  end
+
 end
