@@ -1,9 +1,9 @@
 class MergeSort
 
     def merge_sort(numbers)
-        if numbers.count <= 1
-            return numbers
-        end 
+       
+        return numbers if numbers.count <= 1     
+       
 
         middle = numbers.length / 2
         half_a = merge_sort(numbers.slice(0,middle))
