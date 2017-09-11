@@ -1,7 +1,7 @@
 class BubbleSort
 
   def compare_values(previous, current, array)
-    if array[current].ord < array[previous].ord
+    if array[current] < array[previous]
       array[previous], array[current] = array[current], array[previous]
     end
     array
