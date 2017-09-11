@@ -4,7 +4,7 @@ class InsertionSort
     if !array.kind_of?(Array) || array.length == 0
       return 'error'
     end
-
+    
     for i in 1...array.length 
       j = i
       while j > 0

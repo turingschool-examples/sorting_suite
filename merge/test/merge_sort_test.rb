@@ -1,7 +1,6 @@
 require_relative '../../test_helper.rb'
 require_relative '../lib/merge_sort.rb'
 
-
 class MergeSortTest < Minitest::Test
   attr_reader :merge
 

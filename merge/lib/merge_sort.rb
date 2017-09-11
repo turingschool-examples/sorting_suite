@@ -2,7 +2,6 @@ class MergeSort
 
   def sort(array)
     return array if array.length <= 1 
-
     half  = array.length / 2
     left  = array[0...half]
     right = array[half..-1]
