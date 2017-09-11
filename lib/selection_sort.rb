@@ -1,12 +1,12 @@
 class SortingSuite::SelectionSort
-  #I think it's wrong to use #min here, otherwise would be cleaner
 
   def sort(source)
     self.sort!(source.dup)
   end
 
   def sort!(array)
-    #TODO BAD FOR NON-NUMBERS ARBITRARY COMPARABLES
+    # wait this is dumb if you're not using numbers or symbols...
+    # because == doesn't mean same
     first_sorted_at = array.length
     until first_sorted_at == 0
       min = {
