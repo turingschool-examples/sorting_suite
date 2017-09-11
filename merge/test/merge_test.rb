@@ -20,4 +20,18 @@ class MergeTest < Minitest::Test
 
     assert_equal ["a", "b", "c", "d"], merge.sort(["d", "b", "a", "c"])
   end
+
+  def test_if_first_array_method_is_working
+    merge = Merge.new
+
+    assert_equal ["a", "b"], merge.first_array([], ["b", "a"])
+    assert_equal ["a", "b", "c", "d"], merge.first_array(["a", "c"], ["d", "b"])
+  end
+
+  def test_if_positioning_method_is_working
+    merge = Merge.new
+
+    assert_equal ["a", "b", "c", "d"], merge.positioning(["d", "b"], ["a", "c"])
+  end
+
 end

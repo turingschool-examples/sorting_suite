@@ -25,6 +25,7 @@ class Merge
         sorted << first[index]
       end
     end
+    sorted
   end
 
   def positioning(first, sorted)
@@ -32,8 +33,8 @@ class Merge
       count = 0
       element = first.shift
       positioning_single_element(element, sorted, count)
-      
     end
+    sorted
   end
 
   def positioning_single_element(element, sorted, count)
@@ -45,5 +46,6 @@ class Merge
         sorted << element
       end
     end
+    sorted
   end
 end
