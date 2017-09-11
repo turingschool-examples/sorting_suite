@@ -1,5 +1,3 @@
-require 'pry'
-
 class InsertionSort
 
   def insert_sorted_value(sorted, to_insert)

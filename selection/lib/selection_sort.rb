@@ -1,5 +1,3 @@
-require 'pry'
-
 class SelectionSort
 
   def lowest(unsorted, sorted)
