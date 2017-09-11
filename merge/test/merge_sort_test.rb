@@ -6,16 +6,16 @@ require_relative '../lib/merge_sort'
 class TestMergeSort < Minitest::Test
 
   def test_it_exists
-    merge_sort = MergeSort.new
+    merge = MergeSort.new
 
-    assert_instance_of MergeSort, merge_sort
+    assert_instance_of MergeSort, merge
   end
 
-  def test_sort_two_object_array
-    merge_sort = MergeSort.new
+  def test_merge_sort
+    merge = MergeSort.new
 
-    assert_equal [1, 2], merge_sort.sort_two([2, 1])
-    assert_equal [1, 2], merge_sort.sort_two([1, 2])
+    assert_equal [1, 2, 3, 4], merge.merge_sort([2, 1, 4, 3])
+    assert_equal ["a", "b", "c", "d"], merge.merge_sort(["d", "b", "a", "c"])
   end
 
 end
