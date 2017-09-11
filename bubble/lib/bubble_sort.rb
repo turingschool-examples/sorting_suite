@@ -11,6 +11,7 @@ class Bubblesort
     size.times do |number|
       if array[number] > array[number + 1]
         array[number], array[number + 1] = array[number + 1], array[number]
+        binding.pry
       end
     end
     array
