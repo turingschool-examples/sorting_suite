@@ -26,4 +26,10 @@ class BubbleSortTest < Minitest::Test
 
     assert_equal ["1"], sorter.sort(["1"])
   end
+
+  def test_if_it_can_sort_numbers_and_letters
+    sorter = BubbleSort.new
+
+    assert_equal ["1", "b", "c", "d"], sorter.sort(["d", "b", "1", "c"])
+  end
 end
