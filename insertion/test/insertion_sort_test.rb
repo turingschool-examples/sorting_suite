@@ -34,4 +34,10 @@ class InsertionSortTest < Minitest::Test
 
     assert_equal ["1", "8", "a", "b", "e"], sorted.sort(argue)
   end
+
+  def test_sorting_array_is_passed
+    sorted = InsertionSort.new
+
+    assert_equal ["1", "8", "a", "b", "e"], sorted.sorting(["1", "8", "b", "e"],"a",0)
+  end
 end
