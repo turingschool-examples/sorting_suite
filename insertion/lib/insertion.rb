@@ -12,7 +12,7 @@ class InsertionSort
     if sorted.empty?
       sorted << first
     else
-      positioning(first, sorted, count = 0)
+      positioning(first, sorted)
     end
   end
 
@@ -25,5 +25,6 @@ class InsertionSort
         sorted << first
       end
     end
+    sorted
   end
 end

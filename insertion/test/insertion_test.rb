@@ -33,4 +33,17 @@ class InsertionSortTest < Minitest::Test
     assert_equal ["1", "b", "c", "d"], insertion.sort(["d", "b", "1", "c"])
   end
 
+  def test_sorting_method_works
+    insertion = InsertionSort.new
+
+    assert_equal ["a"], insertion.sorting("a", [])
+    assert_equal ["a", "b", "c"], insertion.sorting("a",  ["b", "c"])
+  end
+
+  def test_positioning_method_works
+    insertion = InsertionSort.new
+
+    assert_equal ["a", "b", "c"], insertion.positioning("a",  ["b", "c"])
+  end
+
 end
