@@ -27,5 +27,10 @@ class InsertionSortTest < Minitest::Test
     assert_equal ["1"], insertion.sort(["1"])
   end
 
+  def test_if_it_can_sort_numbers_and_letters
+    insertion = InsertionSort.new
+
+    assert_equal ["1", "b", "c", "d"], insertion.sort(["d", "b", "1", "c"])
+  end
 
 end
