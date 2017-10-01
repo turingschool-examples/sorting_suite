@@ -1,14 +1,14 @@
 class BubbleSort
   def sort(array)
-    return 'error' if !array.kind_of?(Array)
-    for i in 0..array.length-1
-      for j in 0..array.length-i-1
-        next if array[j].nil? || array[j+1].nil?
-        if array[j] > array[j+1]
-          array[j], array[j+1] = array[j+1], array[j]
-        end
+    array.length.times do 
+      array.length.pred.times do |i|
+        array[i], array[i+1] = array[i+1], array[i] if array[i+1] < array[i]
       end
     end
     array
   end
 end
+
+array = [1, 3, 5, 2, 8]
+b = BubbleSort.new 
+b.sort(array) # => [1, 2, 3, 5, 8]
