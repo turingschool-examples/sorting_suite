@@ -11,18 +11,18 @@ class MergeSort
   end
 
   def merge(left, right)
-    if left.empty?
-      right
-    elsif right.empty?
-      left
-    elsif left.first < right.first
-      [left.first] + merge(left[1..left.length], right)
-    else
-      [right.first] + merge(left, right[1..right.length])
+    final = []
+    until left.length == 0 || right.length == 0
+      if left.first <= right.first
+        final << left.shift
+      else
+        final << right.shift
+      end
     end
+    final.concat(left).concat(right)
   end
 end
 
-arr = (["d", "b", "a", "c"])
-p arr
-arr.merge_sort(list)
+merge = MergeSort.new
+list = (["d", "b", "a", "c"])
+merge.merge_sort(list)
