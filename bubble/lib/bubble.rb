@@ -6,12 +6,30 @@
 
 class Bubble
 
+  attr_reader :field
+
   def sort(field)
     @field = field
+    compare
   end
 
   def previous
-    @field[0]
+    @previous = @field[0]
+  end
+
+  def current
+    @current = @field[1]
+  end
+
+  def compare
+    @previous <=> @current
+  end
+
+  def change
+    compare
+    if compare == -1
+      @previous, @current = @current, @previous
+    end
   end
 
 end
