@@ -34,4 +34,10 @@ class BubbleTest < Minitest::Test
 
     assert_equal ["a", "b", "c", "d"], sorter.sort(["d", "b", "a", "c"])
   end
+
+  def test_it_can_sort_multiple_digit_indices
+    sorter = BubbleSort.new
+
+    assert_equal [0, 1, 12, 69, 353, 85832], sorter.sort([353,85832,0,12,1,69])
+  end
 end
