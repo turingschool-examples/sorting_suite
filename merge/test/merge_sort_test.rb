@@ -13,10 +13,10 @@ class TestMergeSort < Minitest::Test
   # end
 
   def test_can_order_four_values
-    numbers = [4,5,6,7]
-    sorted = MergeSort.new(numbers)
+    numbers = [1,2,0,3]
+    merge_sort = MergeSort.new
 
-    assert_equal [0, 1, 2, 3], sorted
+    assert_equal [0, 1, 2, 3], merge_sort.sort(numbers)
   end
 
   def test_can_order_5_values
