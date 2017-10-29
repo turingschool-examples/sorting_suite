@@ -59,4 +59,11 @@ class BubbleSortTest < Minitest::Test
 
     assert_equal %w[a c d e g s t], result
   end
+
+  def test_can_order_10000_values
+    numbers = (0..10000).map {|num| num}.shuffle
+    sorted = (0..10000).map {|num| num}
+
+    assert_equal sorted, BubbleSort.sort(numbers)
+  end
 end
