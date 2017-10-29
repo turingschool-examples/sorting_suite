@@ -3,6 +3,16 @@ require 'minitest/emoji'
 require './lib/insertion_sort'
 
 class TestInsertionSort < Minitest::Test
+  def test_it_initializes
+    numbers = [0, 2, 1]
+    insertion_sort = InsertionSort.new(numbers)
+
+    assert_instance_of InsertionSort, insertion_sort
+    assert_equal [0,2,1], insertion_sort.to_sort
+    assert_equal [], insertion_sort.sorted
+    assert_nil insertion_sort.to_insert
+  end
+
   def test_can_order_three_values
     numbers = [0, 2, 1]
     insertion_sort = InsertionSort.new(numbers)
