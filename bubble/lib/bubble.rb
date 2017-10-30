@@ -15,19 +15,19 @@ class BubbleSort
     puts field
   end
 
- def compare_and_replace_inner_loop(num1, num2, field)
-  if (field[num1] <=> field[num2]) == 1
-  field[num1], field[num2] = field[num2], field[num1]
-  field
+  def compare_and_replace_inner_loop(num1, num2, field)
+    if (field[num1] <=> field[num2]) == 1
+      field[num1], field[num2] = field[num2], field[num1]
+      field
+    end
   end
- end
 
- def compare_and_replace_outer_loop(num1, num2, field)
-   (field.count).times do
-     compare_and_replace_inner_loop(num1,num2, field)
-     num1 += 1
-     num2 += 1
-   end
- end
+  def compare_and_replace_outer_loop(num1, num2, field)
+    (field.count).times do
+      compare_and_replace_inner_loop(num1,num2, field)
+      num1 += 1
+      num2 += 1
+    end
+  end
 
 end
