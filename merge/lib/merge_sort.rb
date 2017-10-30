@@ -1,5 +1,3 @@
-require './lib/insertion_sort'
-
 class MergeSort
   attr_reader :sorted
 
