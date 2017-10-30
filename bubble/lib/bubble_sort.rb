@@ -1,20 +1,23 @@
-def bubble_sort(sample)
-  sorts = sample.length
+class BubbleSort
+  def bubble_sort(sample)
+    sorts = sample.length
 
-  loop do
-    swap = false
+    loop do
+      swap = false
 
-    (sorts - 1).times do |index|
-      if sample[index] > sample[index + 1]
-        sample[index], sample[index + 1] = sample[index + 1], sample[index]
-        swap = true
+      (sorts - 1).times do |index|
+        if sample[index] > sample[index + 1]
+          sample[index], sample[index + 1] = sample[index + 1], sample[index]
+          swap = true
+        end
       end
-    end
 
-    break if swap == false
+      break if swap == false
+    end
+    sample
   end
-  sample
 end
 
 sample = [5, 2, 9, 7, 1, 3, 8, 1, 4, 6, 0]
-p bubble_sort(sample)
+bs = BubbleSort.new
+p bs.bubble_sort(sample)
