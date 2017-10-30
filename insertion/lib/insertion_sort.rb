@@ -1,13 +1,12 @@
 class InsertionSort
   attr_reader :to_sort, :sorted, :to_insert
 
-  def initialize(collection)
-    @to_sort = collection
+  def initialize
     @sorted = []
     @to_insert = nil
   end
 
-  def sort
+  def sort(to_sort)
     (to_sort.count).times do
       @to_insert = to_sort.shift
       sorted << to_insert if sorted.count == 0
