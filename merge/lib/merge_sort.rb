@@ -22,7 +22,6 @@ class MergeSort
 
     def merge_sort(letters)
       return letters if letters.length <= 1
-
       mid = letters.length / 2
       left = merge_sort(letters[0..mid - 1])
       right = merge_sort(letters[mid..-1])
