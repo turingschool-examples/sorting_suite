@@ -40,4 +40,10 @@ class BubbleTest < Minitest::Test
 
     assert_equal [0, 1, 12, 69, 353, 85832], sorter.sort([353, 85832, 0, 12, 1, 69])
   end
+
+  # def test_array_length_is_length_of_given_array
+  #   sorter = BubbleSort.new
+  #
+  #   assert_equal 5, sorter.sort([1,2,3,4,5]).array_length
+  # end
 end

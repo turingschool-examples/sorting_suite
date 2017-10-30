@@ -1,2 +1,0 @@
-class Insertion
-end
