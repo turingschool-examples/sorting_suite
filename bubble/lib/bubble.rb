@@ -10,23 +10,24 @@ class BubbleSort
     (field.count).times do
       num1 = 0
       num2 = 1
-      compare_and_replace_loop(num1, num2, field)
+      compare_and_replace_outer_loop(num1, num2, field)
     end
     puts field
   end
 
- def compare_and_replace(num1, num2, field)
+ def compare_and_replace_inner_loop(num1, num2, field)
   if (field[num1] <=> field[num2]) == 1
   field[num1], field[num2] = field[num2], field[num1]
   field
   end
  end
 
- def compare_and_replace_loop(num1, num2, field)
+ def compare_and_replace_outer_loop(num1, num2, field)
    (field.count).times do
-     compare_and_replace(num1,num2, field)
+     compare_and_replace_inner_loop(num1,num2, field)
      num1 += 1
      num2 += 1
    end
  end
+
 end
