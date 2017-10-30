@@ -9,9 +9,9 @@ class InsertionSort
 
   def sort(field)
     sorted_array = []
+    @num1 = 0
     push_first_element(sorted_array, field)
     field.shift
-    @num1 = 0
     (field.count * field.count).times do
     comp1 = sorted_array[@num1]
     comparison_tree(comp1, sorted_array, field)
