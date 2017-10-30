@@ -1,18 +1,18 @@
 class BubbleSort
 
-  def sort(array)
-    n = array.length
+  def sort(to_sort)
+    n = to_sort.length
     loop do
       sorted = false
       (n-1).times do |index|
-        if array[index] > array[index + 1]
-          array[index], array[index + 1] = array[index + 1], array[index]
+        if to_sort[index] > to_sort[index + 1]
+          to_sort[index], to_sort[index + 1] = to_sort[index + 1], to_sort[index]
           sorted = true
         end
       end
       break if !sorted
     end
-    array
+    to_sort
   end
 
 

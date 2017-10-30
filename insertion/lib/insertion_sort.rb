@@ -1,18 +1,18 @@
 class InsertionSort
 
-  def sort(array)
-    size = array.length
+  def sort(to_sort)
+    size = to_sort.length
     position = 0
     while position < size
-      current = array[position]
+      current = to_sort[position]
       inserter = position
-      while inserter > 0 && array[inserter - 1] > current
-        array[inserter] = array[inserter - 1]
+      while inserter > 0 && to_sort[inserter - 1] > current
+        to_sort[inserter] = to_sort[inserter - 1]
         inserter -= 1
       end
-      array[inserter] = current
+      to_sort[inserter] = current
       position += 1
     end
-    return array
+    return to_sort
   end
 end
