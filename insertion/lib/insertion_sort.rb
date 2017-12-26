@@ -1,14 +1,25 @@
 class InsertionSort
-  attr_reader :post
-
   def initialize
-    @post = []
+    @sorted = []
   end
 
-  def insert_first(collection)
-    if @post.empty?
-      @post << collection.shift
+  def sort(collection)
+    insert(collection.shift)
+    if collection.empty?
+      return @sorted
+    else
+      sort(collection)
     end
-    collection
+  end
+
+  def insert(to_insert)
+    index = @sorted.index do |current|
+      to_insert < current
+    end
+    if index.nil?
+      @sorted << to_insert
+    else
+      @sorted.insert(index, to_insert)
+    end
   end
 end
