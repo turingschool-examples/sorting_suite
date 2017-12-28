@@ -10,6 +10,7 @@ class MergeSort
     puts pre_sort(to_sort)
     to_sort = start_format(to_sort)
     slice_arrays(to_sort)
+    to_sort = finish_format(to_sort)
   end
 
   def slice_arrays(to_sort)
@@ -29,9 +30,9 @@ class MergeSort
     elsif right.empty?
       left
     elsif left.first < right.first
-      [left.first] + merge(left, right)
+      [left.first] + merge(left[1..left.length], right)
     else right.first < left.first
-      [right.first] + merge(left, right)
+      [right.first] + merge(left, right[1..right.length])
     end
   end
 
