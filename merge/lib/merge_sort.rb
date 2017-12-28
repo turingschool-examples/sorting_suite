@@ -14,9 +14,10 @@ class MergeSort
   end
 
   def slice_arrays(to_sort)
-
+    loop do
+      
   end
-  
+
   def pre_sort(to_sort)
     if to_sort[0].class == Integer || to_sort[0].class == String
       "Sorting..."
