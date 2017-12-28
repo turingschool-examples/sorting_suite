@@ -1,15 +1,15 @@
 require "pry"
 
 class MergeSort
-  #
-  # def initialize
-  #   @result = []
-  # end
+  
+  def initialize
+    @result = []
+  end
 
   def sort(to_sort)
     puts pre_sort(to_sort)
     to_sort = start_format(to_sort)
-    slice_arrays(to_sort)
+    to_sort = slice_arrays(to_sort)
     to_sort = finish_format(to_sort)
   end
 
@@ -25,13 +25,11 @@ class MergeSort
   end
 
   def merge(left, right)
-    if left.empty?
+    if left[0].nil?
       right
-    elsif right.empty?
-      left
-    elsif left.first < right.first
+    elsif left.first > right.first
       [left.first] + merge(left[1..left.length], right)
-    else right.first < left.first
+    else
       [right.first] + merge(left, right[1..right.length])
     end
   end
