@@ -10,6 +10,10 @@ class InsertionSort
     to_sort = start_format(to_sort)
   end
 
+  def sorting_loop(to_sort)
+    
+  end
+
   def start_format(to_sort)
     to_sort.reduce([]) do |result, letter|
       result << letter.ord
