@@ -14,8 +14,13 @@ class MergeSort
   end
 
   def slice_arrays(to_sort)
-    loop do
-      
+    if to_sort.length <= 1
+      to_sort
+    else
+      middle = (to_sort.length / 2)
+      @left = to_sort[0..middle - 1]
+      @right = to_sort[middle..-1]
+    end
   end
 
   def pre_sort(to_sort)
