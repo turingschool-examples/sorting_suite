@@ -1,11 +1,10 @@
 require "pry"
 
 class MergeSort
-
-  def initialize
-    @result = []
-    @left   = 0
-    @right  = 0
+  # 
+  # def initialize
+  #   @result = []
+  # end
 
   def sort(to_sort)
     puts pre_sort(to_sort)
@@ -20,6 +19,19 @@ class MergeSort
       middle = (to_sort.length / 2)
       @left = to_sort[0..middle - 1]
       @right = to_sort[middle..-1]
+    end
+    merge
+  end
+
+  def merge
+    if @left.empty?
+      @right
+    elsif @right.empty?
+      @left
+    elsif @left.first < @right.first
+      [@left.first] + merge
+    else @right.first < @left.first
+      [@right.first] + merge
     end
   end
 
