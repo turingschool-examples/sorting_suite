@@ -1,5 +1,3 @@
-require 'pry'
-
 class BubbleSort
 
   def sort_one_pass(user_input)

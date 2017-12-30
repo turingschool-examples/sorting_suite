@@ -2,7 +2,6 @@ gem 'minitest'
 require './bubble/lib/bubble_sort'
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'pry'
 
 class BubbleSortTest < Minitest::Test
 
