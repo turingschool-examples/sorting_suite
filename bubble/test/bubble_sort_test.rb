@@ -1,4 +1,3 @@
-gem 'minitest'
 require './bubble/lib/bubble_sort'
 require 'minitest/autorun'
 require 'minitest/pride'
