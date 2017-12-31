@@ -1,5 +1,3 @@
-require 'pry'
-
 class InsertionSort
 
   attr_reader :sorted
