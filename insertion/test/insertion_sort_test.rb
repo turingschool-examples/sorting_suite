@@ -18,7 +18,7 @@ class InsertionSortTest < Minitest::Test
   end
 
   def test_start_format_for_conversion_to_an_array_of_numbers
-    insertion = InsertionSort.new
+    insertion = InsertionSort.new 
 
     assert_equal [100, 98, 97, 99], insertion.start_format(["d", "b", "a", "c"])
   end
