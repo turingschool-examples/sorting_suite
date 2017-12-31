@@ -2,10 +2,6 @@ require "pry"
 
 class InsertionSort
 
-  def initialize
-    @sorted = []
-  end
-
   def sort(to_sort)
     puts pre_sort(to_sort)
     to_sort = start_format(to_sort)
@@ -26,7 +22,7 @@ class InsertionSort
       to_sort[holding] = current_sorting
       place += 1
     end
-    return to_sort    
+    return to_sort
   end
 
   def start_format(to_sort)
