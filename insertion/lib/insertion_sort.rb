@@ -22,9 +22,9 @@ class InsertionSort
     sorted.each_with_index do |element, index|
       if sorted[index + 1].nil?
         element
-      elsif element >= sorted[index + 1]
+      elsif element > sorted[index + 1]
         sorted[index], sorted[index + 1] = sorted[index + 1], sorted[index]
-      elsif element < sorted[index + 1]
+      elsif element <= sorted[index + 1]
         element
       end
     end
