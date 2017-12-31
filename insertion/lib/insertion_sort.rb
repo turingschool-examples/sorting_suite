@@ -9,10 +9,8 @@ class InsertionSort
     finish_format(to_sort)
   end
 
-  def sorting(to_sort)
-    total = to_sort.length
-    place = 0
-    while place < total
+  def sorting(to_sort, place = 0)
+    while place < to_sort.length
       current_sorting = to_sort[place]
       holding = place
       while holding > 0 && to_sort[holding - 1] > current_sorting
@@ -22,7 +20,7 @@ class InsertionSort
       to_sort[holding] = current_sorting
       place += 1
     end
-    return to_sort
+    to_sort
   end
 
   def start_format(to_sort)
