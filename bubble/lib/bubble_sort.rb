@@ -1,19 +1,16 @@
 class BubbleSort
-
-  def sort(argue)
+  def sort(num)
     swap = true
     while swap == true
       swap = false
-      count = argue.length - 1
+      count = num.length - 1
       count.times do |obj|
-        if argue[obj] > argue[obj + 1]
+        if num[obj] > num[obj + 1]
           swap = true
-          argue[obj], argue[obj + 1] = argue[obj + 1], argue[obj]
+          num[obj], num[obj + 1] = num[obj + 1], num[obj]
         end
       end   
     end
-    argue
+    num
   end
 end
-
-

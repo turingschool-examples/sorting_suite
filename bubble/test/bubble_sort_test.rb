@@ -34,4 +34,5 @@ class BubbleSortTest < Minitest::Test
 
     assert_equal ["1", "8", "a", "b", "e"], sorted.sort(argue)
   end
+  
 end

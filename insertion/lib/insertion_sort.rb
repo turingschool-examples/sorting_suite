@@ -13,7 +13,12 @@ class InsertionSort
     if array.empty?
         array << first
     else
-      array.length.times do |obj|
+      positioning(array, first, count)
+    end
+  end
+
+  def positioning(array, first, count)
+     array.length.times do |obj|
         if array[obj] > first && count != 1
           count = 1
           array.insert(obj, first)
@@ -21,7 +26,7 @@ class InsertionSort
           array << first
         end
       end
-    end
     array
   end
+
 end
